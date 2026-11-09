@@ -1,0 +1,5 @@
+{'size': 0.2, 'power_one_sided': 0.677, 'mc_se': 0.015, 'false_flag_one_sided': 0.041}
+{'size': 0.225, 'power_one_sided': 0.757, 'mc_se': 0.014, 'false_flag_one_sided': 0.04}
+{'size': 0.25, 'power_one_sided': 0.807, 'mc_se': 0.012, 'false_flag_one_sided': 0.04}
+{'size': 0.275, 'power_one_sided': 0.85, 'mc_se': 0.011, 'false_flag_one_sided': 0.04}
+{'size': 0.3, 'power_one_sided': 0.899, 'mc_se': 0.01, 'false_flag_one_sided': 0.039}

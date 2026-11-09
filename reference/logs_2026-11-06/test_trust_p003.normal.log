@@ -1,0 +1,40 @@
+test_01_unverified_csv_is_C_not_A2 (__main__.P003Tests.test_01_unverified_csv_is_C_not_A2) ... ok
+test_02_data_change_changes_hash (__main__.P003Tests.test_02_data_change_changes_hash) ... ok
+test_03_empty_provenance_cannot_claim_A2 (__main__.P003Tests.test_03_empty_provenance_cannot_claim_A2) ... ok
+test_04_missing_manifest_returns_C_for_legacy_in_strict_mode (__main__.P003Tests.test_04_missing_manifest_returns_C_for_legacy_in_strict_mode) ... ok
+test_05_legacy_mode_preserves_historical_grade (__main__.P003Tests.test_05_legacy_mode_preserves_historical_grade) ... ok
+test_06_real_referenced_grades_propagate_weakest (__main__.P003Tests.test_06_real_referenced_grades_propagate_weakest) ... ok
+test_07_missing_reference_rejected (__main__.P003Tests.test_07_missing_reference_rejected) ... ok
+test_08_mutated_reference_rejected (__main__.P003Tests.test_08_mutated_reference_rejected) ... ok
+test_09_unsupported_derived_grade_as_input_rejected (__main__.P003Tests.test_09_unsupported_derived_grade_as_input_rejected) ... ok
+test_10_forged_grade_on_record_rejected (__main__.P003Tests.test_10_forged_grade_on_record_rejected) ... ok
+test_11_changed_model_rejected (__main__.P003Tests.test_11_changed_model_rejected) ... ok
+test_12_duplicate_dependency_rejected (__main__.P003Tests.test_12_duplicate_dependency_rejected) ... ok
+test_13_grade_order_no_upgrade (__main__.P003Tests.test_13_grade_order_no_upgrade) ... ok
+test_14_wrong_dependency_label_rejected (__main__.P003Tests.test_14_wrong_dependency_label_rejected) ... ok
+test_15_archived_replay_hash_unchanged (__main__.P003Tests.test_15_archived_replay_hash_unchanged) ... /home/claude/drive-in/v2repo/diyar/records.py:159: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/claude/drive-in/v2repo/results/prototype/records.jsonl' mode='r' encoding='utf-8'>
+  rows = [json.loads(line) for line in open(path)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/claude/drive-in/v2repo/diyar/replay.py:28: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/claude/drive-in/v2repo/results/prototype/ledger.json' mode='r' encoding='utf-8'>
+  "ledger": json.load(open(out_dir / "ledger.json")),
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/claude/drive-in/v2repo/diyar/replay.py:29: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/claude/drive-in/v2repo/results/prototype/public_keys.json' mode='r' encoding='utf-8'>
+  "keys": json.load(open(out_dir / "public_keys.json")),
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/claude/drive-in/v2repo/diyar/replay.py:30: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/claude/drive-in/v2repo/results/prototype/params.json' mode='r' encoding='utf-8'>
+  "params": json.load(open(out_dir / "params.json")),
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_16_report_baseline_and_performance_inherit_C (__main__.ReportPropagationTests.test_16_report_baseline_and_performance_inherit_C) ... ok
+test_17_weather_coverage_grade_follows_source (__main__.ReportPropagationTests.test_17_weather_coverage_grade_follows_source) ... ok
+test_18_legacy_A2_baseline_capped_in_strict_V2_report (__main__.ReportPropagationTests.test_18_legacy_A2_baseline_capped_in_strict_V2_report) ... ok
+test_19_rejected_unrelated_binding_not_upgraded (__main__.ReportPropagationTests.test_19_rejected_unrelated_binding_not_upgraded) ... ok
+test_20_no_weather_grade_claimed_A2 (__main__.ReportPropagationTests.test_20_no_weather_grade_claimed_A2) ... ok
+test_21_sufficient_monthly_performance_inherits_training_C (__main__.ReportPropagationTests.test_21_sufficient_monthly_performance_inherits_training_C) ... ok
+test_22_gate_flags_grade_is_not_undefined_derived (__main__.ReportPropagationTests.test_22_gate_flags_grade_is_not_undefined_derived) ... ok
+test_23_fake_A1_gate_cannot_upgrade_C_baseline (__main__.ReportPropagationTests.test_23_fake_A1_gate_cannot_upgrade_C_baseline) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.451s
+
+OK

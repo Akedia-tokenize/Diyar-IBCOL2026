@@ -1,0 +1,20 @@
+{
+ "buildings": 106,
+ "resolution": "daily",
+ "year": 2017,
+ "baseline_fitted_on": 2016,
+ "cv_rmse": {
+  "median": 0.1316,
+  "p25": 0.0961,
+  "p75": 0.1802,
+  "max": 0.7785
+ },
+ "nmbe": {
+  "median": -0.0145,
+  "p25": -0.0557,
+  "p75": 0.0297
+ },
+ "share_abs_nmbe_le_10pct": 0.821,
+ "share_cv_le_30pct": 0.962,
+ "note": "Daily aggregation; G14 hourly thresholds (CV 30%, NMBE 10%) are quoted for orientation only."
+}

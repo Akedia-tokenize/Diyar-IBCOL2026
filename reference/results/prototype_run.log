@@ -1,0 +1,35 @@
+{
+ "gate": {
+  "pass": 201,
+  "flag_rule": 1,
+  "flag_conformal": 8,
+  "calibrating": 60
+ },
+ "days_committed": 91,
+ "fields": 645,
+ "record_versions": 647,
+ "corrected_fields": [
+  "Fox_office_Joy/elec/2017-01-15",
+  "Fox_office_Joy/gate/2017-01-15"
+ ],
+ "records_bytes": 1424551,
+ "ledger_bytes": 5459820,
+ "slh_param": "sha2_256s",
+ "slh_signature_bytes": 29792,
+ "example_proof_bytes": 352,
+ "pipeline_seconds": 562.7,
+ "baselines": {
+  "Fox_office_Joy": {
+   "cv_rmse": 0.0806,
+   "nmbe": -0.0
+  },
+  "Fox_education_Wendell": {
+   "cv_rmse": 0.0456,
+   "nmbe": 0.0
+  },
+  "Fox_assembly_Renna": {
+   "cv_rmse": 0.0457,
+   "nmbe": 0.0
+  }
+ }
+}

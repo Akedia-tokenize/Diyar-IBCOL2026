@@ -1,0 +1,42 @@
+[
+ {
+  "check": "N1 missing weather -> status partial, metered energy and coverage unchanged",
+  "pass": true,
+  "info": "status complete -> partial, weather coverage 0.96774"
+ },
+ {
+  "check": "N2 six metered hours removed -> coverage falls by 6/744",
+  "pass": true,
+  "info": "drop 0.00806"
+ },
+ {
+  "check": "N3 24 identical timestamps -> coverage_ok False, 1 distinct hour, duplicate_interval",
+  "pass": true,
+  "info": "{\"coverage_ok\": false, \"hours_present\": 1, \"duplicate_readings\": 23, \"plausible_ok\": true, \"reasons\": [\"duplicate_interval x23\", \"insufficient_coverage 1/24\"]}"
+ },
+ {
+  "check": "N4 readings stamped on another day do not count",
+  "pass": true,
+  "info": "[\"out_of_period x24\", \"insufficient_coverage 0/24\"]"
+ },
+ {
+  "check": "N5 2,000 malformed proofs: zero crashes, zero false accepts, genuine proofs verify",
+  "pass": true,
+  "info": "crashes 0, false accepts 0"
+ },
+ {
+  "check": "N6 bitemporal query answers both axes",
+  "pass": true,
+  "info": "got [100, 90, 100, 95, 90, None]"
+ },
+ {
+  "check": "N7 grade follows the signed certificate (B; removed -> refused; relabelled -> refused)",
+  "pass": true,
+  "info": "('B', 'refused', 'refused')"
+ },
+ {
+  "check": "N8 canonical encoding refuses NaN and Infinity",
+  "pass": true,
+  "info": "3/3 refused"
+ }
+]

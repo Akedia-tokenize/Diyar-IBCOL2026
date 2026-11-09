@@ -1,0 +1,5 @@
+PASS  second preimage (inner node as leaf)     naive fooled=True  ours rejects=True
+PASS  duplicate leaf (CVE-2012-2459)           naive fooled=True  ours rejects=True
+PASS  both-children proof (BNB Bridge 2022)    naive fooled=True  ours rejects=True
+PASS  unbounded leaf index (Hyperbridge 2026)  naive fooled=True  ours rejects=True
+PASS  honest inclusion + non-membership        naive fooled=True  ours rejects=True

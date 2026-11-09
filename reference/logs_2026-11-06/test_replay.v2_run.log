@@ -1,0 +1,21 @@
+PASS  1 signature chain verifies (ECDSA + SLH-DSA)                        91 days, param sha2_256s
+PASS  2 recomputed state root = signed root, every day                    mismatches: []
+PASS  3 all A1/A2 evidence signatures re-verify                           0 bad
+PASS  4a replay(Jan, as of 4 Feb) reproduces every published report hash  
+PASS  4b replay(Jan, now) differs only for the backfilled building        differs: ['Fox_office_Joy']
+PASS  5 tampered reading detected by device signature and by root         first root mismatch: 2017-01-20
+PASS  6 one field verifies alone against the signed root                  proof 320 bytes, 9 siblings
+PASS  7 a never-entered field is proved absent                            
+{
+ "chain_seconds": 0.5,
+ "root_recompute_seconds_all_days": 10.1,
+ "correction_effect": {
+  "building": "Fox_office_Joy",
+  "actual_kwh_as_of_4Feb": 112692.56,
+  "actual_kwh_now": 113461.14,
+  "coverage_as_of_4Feb": 0.99059,
+  "coverage_now": 0.99866,
+  "performance_as_of_4Feb": 0.00827,
+  "performance_now": 0.00789
+ }
+}

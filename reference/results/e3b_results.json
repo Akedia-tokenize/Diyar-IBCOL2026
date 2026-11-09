@@ -1,0 +1,41 @@
+{
+ "copy": {
+  "exact_copy_detected_by_rule": 1.0,
+  "exact_copy_false_match_rate_clean": 0.0,
+  "near_copy_power": 1.0,
+  "near_copy_false_flag": 0.038,
+  "clean_median_month_on_month_change": 0.06
+ },
+ "rounding": {
+  "rounding_detected": 0.981,
+  "honest_flagged": 0.0,
+  "optimistic_bias_mean": -0.0194,
+  "optimistic_bias_worst": -0.0429,
+  "natural_quarter_drift_sd": 0.133
+ },
+ "selective_deletion": {
+  "buildings": 106,
+  "worst_month_is_hottest": 0.047,
+  "worst_month_in_three_hottest": 0.226,
+  "chance_level_single": 0.083,
+  "chance_level_three": 0.25,
+  "worst_month_distribution": {
+   "1": 7,
+   "2": 20,
+   "3": 4,
+   "4": 14,
+   "5": 1,
+   "6": 5,
+   "7": 8,
+   "8": 11,
+   "9": 23,
+   "10": 7,
+   "11": 3,
+   "12": 3
+  }
+ },
+ "params": {
+  "alpha": 0.05,
+  "reps": 1000
+ }
+}

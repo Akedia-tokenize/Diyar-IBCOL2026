@@ -1,0 +1,8 @@
+{
+  "weather-service": {
+    "weather-key-01": "03b597c17c99c3f4e716e8baecb39438eec6ca884cdbdc58aaa213c0d69cd7ee2d"
+  },
+  "land-registry": {
+    "registry-key-01": "03dc6d78a0c0d195f4eeb91118daaf8444e05e29c9d4703dfed94816b7e47f2d03"
+  }
+}

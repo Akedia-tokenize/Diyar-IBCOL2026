@@ -1,0 +1,57 @@
+{
+  "channels": {
+    "buildings": 1631,
+    "mean": 1.852,
+    "median": 2.0,
+    "p90": 3.0,
+    "max": 5,
+    "distribution": {
+      "1": 763,
+      "2": 390,
+      "3": 438,
+      "4": 37,
+      "5": 3
+    }
+  },
+  "measured_building_year": {
+    "building": "Bobcat_education_Dylan",
+    "channels": 5,
+    "readings_hourly_2016": 42708,
+    "record_bytes": 43,
+    "ecdsa_raw_bytes": 64,
+    "ecdsa_der_bytes_mean": 70.99,
+    "raw_store_bytes": 1836444,
+    "signed_store_bytes": 4569756,
+    "daily_roots": 366,
+    "example_root": "979a178302a4fc2ee90fc2e20c8d0f0b9c9fca656371a632b415a333d941af81"
+  },
+  "slh_dsa": {
+    "sha2_128s": {
+      "signature_bytes": 7856,
+      "public_key_bytes": 32,
+      "verified": true
+    },
+    "sha2_128f": {
+      "signature_bytes": 17088,
+      "public_key_bytes": 32,
+      "verified": true
+    },
+    "sha2_256s": {
+      "signature_bytes": 29792,
+      "public_key_bytes": 64,
+      "verified": true
+    },
+    "sha2_256f": {
+      "signature_bytes": 49856,
+      "public_key_bytes": 64,
+      "verified": true
+    }
+  },
+  "assumptions": {
+    "resolution": "15 minutes (96/day); BDG2 itself is hourly",
+    "record_format": "field_id16 | valid_time8 | tx_time8 | value8 | grade1 | schema_ver2",
+    "device_signature": "ECDSA P-256, stored raw r||s",
+    "buildings": 10000,
+    "years": 60
+  }
+}

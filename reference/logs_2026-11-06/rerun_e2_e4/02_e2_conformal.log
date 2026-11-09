@@ -1,0 +1,98 @@
+{
+ "alpha": 0.05,
+ "gamma": 0.005,
+ "window_days": 28,
+ "focus_site": "Fox",
+ "focus": {
+  "buildings": 106,
+  "building_days": 32323,
+  "split": {
+   "overall_flag_rate": 0.1629,
+   "worst_month_rate": 0.2148,
+   "best_month_rate": 0.0799,
+   "monthly_spread_max_minus_min": 0.1348,
+   "share_buildings_over_2alpha": 0.4906,
+   "share_buildings_under_alpha_over_5": 0.1132,
+   "median_building_rate": 0.098
+  },
+  "mondrian": {
+   "overall_flag_rate": 0.1447,
+   "worst_month_rate": 0.2107,
+   "best_month_rate": 0.0861,
+   "monthly_spread_max_minus_min": 0.1246,
+   "share_buildings_over_2alpha": 0.4528,
+   "share_buildings_under_alpha_over_5": 0.066,
+   "median_building_rate": 0.0801
+  },
+  "rolling28": {
+   "overall_flag_rate": 0.0533,
+   "worst_month_rate": 0.0836,
+   "best_month_rate": 0.0384,
+   "monthly_spread_max_minus_min": 0.0452,
+   "share_buildings_over_2alpha": 0.0094,
+   "share_buildings_under_alpha_over_5": 0.0,
+   "median_building_rate": 0.0493
+  },
+  "aci": {
+   "overall_flag_rate": 0.0507,
+   "worst_month_rate": 0.0762,
+   "best_month_rate": 0.0362,
+   "monthly_spread_max_minus_min": 0.0401,
+   "share_buildings_over_2alpha": 0.0,
+   "share_buildings_under_alpha_over_5": 0.0,
+   "median_building_rate": 0.0495
+  }
+ },
+ "all_sites": {
+  "buildings": 801,
+  "building_days": 242431,
+  "split": {
+   "overall_flag_rate": 0.1742,
+   "worst_month_rate": 0.2366,
+   "best_month_rate": 0.0721,
+   "monthly_spread_max_minus_min": 0.1645,
+   "share_buildings_over_2alpha": 0.5031,
+   "share_buildings_under_alpha_over_5": 0.0724,
+   "median_building_rate": 0.1013
+  },
+  "mondrian": {
+   "overall_flag_rate": 0.1683,
+   "worst_month_rate": 0.2239,
+   "best_month_rate": 0.1211,
+   "monthly_spread_max_minus_min": 0.1028,
+   "share_buildings_over_2alpha": 0.4844,
+   "share_buildings_under_alpha_over_5": 0.0387,
+   "median_building_rate": 0.0954
+  },
+  "rolling28": {
+   "overall_flag_rate": 0.0543,
+   "worst_month_rate": 0.0711,
+   "best_month_rate": 0.038,
+   "monthly_spread_max_minus_min": 0.0331,
+   "share_buildings_over_2alpha": 0.01,
+   "share_buildings_under_alpha_over_5": 0.0,
+   "median_building_rate": 0.0523
+  },
+  "aci": {
+   "overall_flag_rate": 0.0505,
+   "worst_month_rate": 0.0645,
+   "best_month_rate": 0.0341,
+   "monthly_spread_max_minus_min": 0.0304,
+   "share_buildings_over_2alpha": 0.0,
+   "share_buildings_under_alpha_over_5": 0.0,
+   "median_building_rate": 0.0502
+  }
+ }
+}
+       split  mondrian  rolling28    aci
+month                                   
+3      0.080     0.174      0.046  0.044
+4      0.082     0.104      0.043  0.041
+5      0.180     0.143      0.084  0.076
+6      0.176     0.151      0.038  0.036
+7      0.186     0.211      0.045  0.043
+8      0.188     0.193      0.059  0.056
+9      0.189     0.162      0.042  0.039
+10     0.160     0.086      0.039  0.042
+11     0.172     0.101      0.069  0.068
+12     0.215     0.120      0.067  0.062

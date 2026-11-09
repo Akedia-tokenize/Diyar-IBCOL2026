@@ -1,0 +1,13 @@
+basis,channels,scenario,MB_per_building_year,GB_fleet_year,TB_60y_single_copy,TB_60y_3x_replication,"TB_60y_RS(10,4)_1.4x"
+BDG2 mean channels,1.852,S0 raw readings only,2.79044544,27.9044544,1.674267264,5.022801792,2.3439741696
+BDG2 mean channels,1.852,S1 raw + device ECDSA per reading,6.9436665600000005,69.4366656,4.166199936,12.498599808,5.8326799104
+BDG2 mean channels,1.852,S2 S1 + SLH-DSA-128s per reading,516.7515590400001,5167.5155904,310.050935424,930.152806272,434.0713095936
+BDG2 mean channels,1.852,S3 S1 + SLH-DSA-256s per building per day,17.817746560000003,178.17746560000003,10.690647936000001,32.07194380800001,14.966907110400001
+BDG2 mean channels,1.852,S4 S1 + SLH-DSA-256s on one global daily root,6.9447539680000006,69.44753968,4.1668523808,12.5005571424,5.83359333312
+BDG2 mean channels,1.852,S5 raw + device ECDSA per channel-day + global 256s root,2.834795568,28.34795568,1.7008773408,5.1026320224,2.38122827712
+whitepaper assumption (5 channels),5.0,S0 raw readings only,7.5336,75.336,4.52016,13.56048,6.328224
+whitepaper assumption (5 channels),5.0,S1 raw + device ECDSA per reading,18.7464,187.464,11.24784,33.74352,15.746975999999998
+whitepaper assumption (5 channels),5.0,S2 S1 + SLH-DSA-128s per reading,1395.1176,13951.176,837.07056,2511.21168,1171.898784
+whitepaper assumption (5 channels),5.0,S3 S1 + SLH-DSA-256s per building per day,29.62048,296.2048,17.772288,53.316864,24.8812032
+whitepaper assumption (5 channels),5.0,S4 S1 + SLH-DSA-256s on one global daily root,18.747487408,187.47487408,11.2484924448,33.7454773344,15.747889422719998
+whitepaper assumption (5 channels),5.0,S5 raw + device ECDSA per channel-day + global 256s root,7.6514874079999995,76.51487408,4.5908924448,13.7726773344,6.42724942272

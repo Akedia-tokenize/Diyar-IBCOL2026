@@ -1,0 +1,55 @@
+{
+ "checks": [
+  {
+   "name": "1 signature chain verifies (ECDSA + SLH-DSA)",
+   "ok": true,
+   "info": "91 days, param sha2_256s"
+  },
+  {
+   "name": "2 recomputed state root = signed root, every day",
+   "ok": true,
+   "info": "mismatches: []"
+  },
+  {
+   "name": "3 all A1/A2 evidence signatures re-verify",
+   "ok": true,
+   "info": "0 bad"
+  },
+  {
+   "name": "4a replay(Jan, as of 4 Feb) reproduces every published report hash",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "4b replay(Jan, now) differs only for the backfilled building",
+   "ok": true,
+   "info": "differs: ['Fox_office_Joy']"
+  },
+  {
+   "name": "5 tampered reading detected by device signature and by root",
+   "ok": true,
+   "info": "first root mismatch: 2017-01-20"
+  },
+  {
+   "name": "6 one field verifies alone against the signed root",
+   "ok": true,
+   "info": "proof 320 bytes, 9 siblings"
+  },
+  {
+   "name": "7 a never-entered field is proved absent",
+   "ok": true,
+   "info": ""
+  }
+ ],
+ "chain_seconds": 0.5,
+ "root_recompute_seconds_all_days": 10.9,
+ "correction_effect": {
+  "building": "Fox_office_Joy",
+  "actual_kwh_as_of_4Feb": 112692.56,
+  "actual_kwh_now": 113461.14,
+  "coverage_as_of_4Feb": 0.99059,
+  "coverage_now": 0.99866,
+  "performance_as_of_4Feb": 0.00827,
+  "performance_now": 0.00789
+ }
+}

@@ -1,0 +1,9 @@
+/* v5-2a, 9 Nov 2026: contrast fixes found by _dev/contrast.py with all sections revealed.
+   The theme attribute is now always set at start-up (js/app.js), so a dark system theme no longer mixes light components. */
+.v52-graph .eyebrow{color:#C59BFF!important}
+.v52-grant-action.is-empty{opacity:1;border-style:dashed}
+.v52-grant-action.is-empty small,.v52-grant-action.is-empty b{color:var(--text-3)!important}
+:root[data-theme="light"] .verify-overview__action{background:#18223F!important;border-color:#25305A!important}
+.workflow-showcase .eyebrow{color:var(--text-3)!important}
+:root[data-theme="light"] .verify-overview__action,:root[data-theme="light"] .verify-overview__action span,:root[data-theme="light"] .verify-overview__action small{color:#B3BDDD!important}
+:root[data-theme="light"] .verify-overview__action strong{color:#EEF2FF!important}

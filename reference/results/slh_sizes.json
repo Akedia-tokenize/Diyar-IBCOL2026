@@ -1,0 +1,22 @@
+{
+  "sha2_128s": {
+    "signature_bytes": 7856,
+    "public_key_bytes": 32,
+    "verified": true
+  },
+  "sha2_128f": {
+    "signature_bytes": 17088,
+    "public_key_bytes": 32,
+    "verified": true
+  },
+  "sha2_256s": {
+    "signature_bytes": 29792,
+    "public_key_bytes": 64,
+    "verified": true
+  },
+  "sha2_256f": {
+    "signature_bytes": 49856,
+    "public_key_bytes": 64,
+    "verified": true
+  }
+}

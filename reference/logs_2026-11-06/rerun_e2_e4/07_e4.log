@@ -1,0 +1,50 @@
+shave 0.025 {'0.01': 0.013, '0.02': 0.03, '0.05': 0.076, '0.10': 0.116}
+shave 0.05 {'0.01': 0.019, '0.02': 0.051, '0.05': 0.099, '0.10': 0.179}
+shave 0.1 {'0.01': 0.022, '0.02': 0.077, '0.05': 0.189, '0.10': 0.339}
+shave 0.15 {'0.01': 0.05, '0.02': 0.181, '0.05': 0.375, '0.10': 0.612}
+shave 0.2 {'0.01': 0.083, '0.02': 0.338, '0.05': 0.666, '0.10': 0.781}
+shave 0.3 {'0.01': 0.264, '0.02': 0.791, '0.05': 0.886, '0.10': 0.929}
+shave 0.4 {'0.01': 0.538, '0.02': 0.936, '0.05': 0.972, '0.10': 0.977}
+relocate 0.025 {'0.01': 0.047, '0.02': 0.117, '0.05': 0.207, '0.10': 0.274}
+relocate 0.05 {'0.01': 0.047, '0.02': 0.145, '0.05': 0.233, '0.10': 0.293}
+relocate 0.1 {'0.01': 0.084, '0.02': 0.195, '0.05': 0.329, '0.10': 0.426}
+relocate 0.15 {'0.01': 0.12, '0.02': 0.31, '0.05': 0.459, '0.10': 0.563}
+relocate 0.2 {'0.01': 0.144, '0.02': 0.415, '0.05': 0.572, '0.10': 0.666}
+relocate 0.3 {'0.01': 0.308, '0.02': 0.685, '0.05': 0.793, '0.10': 0.85}
+relocate 0.4 {'0.01': 0.543, '0.02': 0.864, '0.05': 0.92, '0.10': 0.941}
+{'window_days': 28, 'alpha': 0.05, 'cases_per_building_year': 2.011, 'burst20_opened_within_7_days': 0.324, 'clean_flag_rate': 0.0541}
+{'window_days': 56, 'alpha': 0.05, 'cases_per_building_year': 3.104, 'burst20_opened_within_7_days': 0.477, 'clean_flag_rate': 0.0607}
+{'window_days': 56, 'alpha': 0.02, 'cases_per_building_year': 1.294, 'burst20_opened_within_7_days': 0.255, 'clean_flag_rate': 0.0336}
+{'window_days': 112, 'alpha': 0.05, 'cases_per_building_year': 4.888, 'burst20_opened_within_7_days': 0.544, 'clean_flag_rate': 0.0733}
+{'window_days': 112, 'alpha': 0.02, 'cases_per_building_year': 1.659, 'burst20_opened_within_7_days': 0.383, 'clean_flag_rate': 0.0355}
+{'window_days': 112, 'alpha': 0.01, 'cases_per_building_year': 0.691, 'burst20_opened_within_7_days': 0.181, 'clean_flag_rate': 0.0191}
+[
+ {
+  "alpha": 0.01,
+  "cases_per_building_year": 0.0377,
+  "false_alarms_per_building_year": 0.0348,
+  "power_shave20": 0.083,
+  "power_shave30": 0.264
+ },
+ {
+  "alpha": 0.02,
+  "cases_per_building_year": 0.0755,
+  "false_alarms_per_building_year": 0.0632,
+  "power_shave20": 0.338,
+  "power_shave30": 0.791
+ },
+ {
+  "alpha": 0.05,
+  "cases_per_building_year": 0.1887,
+  "false_alarms_per_building_year": 0.1652,
+  "power_shave20": 0.666,
+  "power_shave30": 0.886
+ },
+ {
+  "alpha": 0.1,
+  "cases_per_building_year": 0.3774,
+  "false_alarms_per_building_year": 0.3512,
+  "power_shave20": 0.781,
+  "power_shave30": 0.929
+ }
+]

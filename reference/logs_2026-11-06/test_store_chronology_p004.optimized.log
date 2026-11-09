@@ -1,0 +1,38 @@
+test_01_initial_valid_record (__main__.StoreChronologyP004Tests.test_01_initial_valid_record) ... ok
+test_02_later_transaction_accepted (__main__.StoreChronologyP004Tests.test_02_later_transaction_accepted) ... ok
+test_03_duplicate_timestamp_rejected (__main__.StoreChronologyP004Tests.test_03_duplicate_timestamp_rejected) ... ok
+test_04_earlier_transaction_rejected (__main__.StoreChronologyP004Tests.test_04_earlier_transaction_rejected) ... ok
+test_05_mixed_field_same_tx_allowed (__main__.StoreChronologyP004Tests.test_05_mixed_field_same_tx_allowed) ... ok
+test_06_rejected_invalid_first_record_does_not_create_bucket (__main__.StoreChronologyP004Tests.test_06_rejected_invalid_first_record_does_not_create_bucket) ... ok
+test_07_backfill_older_valid_date_later_tx_allowed (__main__.StoreChronologyP004Tests.test_07_backfill_older_valid_date_later_tx_allowed) ... ok
+test_08_time_zone_ambiguity_rejected (__main__.StoreChronologyP004Tests.test_08_time_zone_ambiguity_rejected) ... ok
+test_09_non_canonical_clock_rejected (__main__.StoreChronologyP004Tests.test_09_non_canonical_clock_rejected) ... ok
+test_10_invalid_clock_rejected (__main__.StoreChronologyP004Tests.test_10_invalid_clock_rejected) ... ok
+test_11_missing_or_non_string_tx_rejected (__main__.StoreChronologyP004Tests.test_11_missing_or_non_string_tx_rejected) ... ok
+test_12_reversed_valid_interval_rejected (__main__.StoreChronologyP004Tests.test_12_reversed_valid_interval_rejected) ... ok
+test_13_invalid_valid_day_rejected (__main__.StoreChronologyP004Tests.test_13_invalid_valid_day_rejected) ... ok
+test_14_open_ended_valid_interval_allowed (__main__.StoreChronologyP004Tests.test_14_open_ended_valid_interval_allowed) ... ok
+test_15_invalid_grade_refused_even_under_optimized_python (__main__.StoreChronologyP004Tests.test_15_invalid_grade_refused_even_under_optimized_python) ... ok
+test_16_invalid_field_refused (__main__.StoreChronologyP004Tests.test_16_invalid_field_refused) ... ok
+test_17_certificate_id_reuse_never_allowed (__main__.StoreChronologyP004Tests.test_17_certificate_id_reuse_never_allowed) ... ok
+test_18_revocation_id_reuse_never_allowed (__main__.StoreChronologyP004Tests.test_18_revocation_id_reuse_never_allowed) ... ok
+test_19_dump_load_roundtrip_preserves_hashes (__main__.StoreChronologyP004Tests.test_19_dump_load_roundtrip_preserves_hashes) ... /home/claude/drive-in/v2repo/diyar/records.py:159: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpa0img5y1/records.jsonl' mode='r' encoding='utf-8'>
+  rows = [json.loads(line) for line in open(path)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_20_corrupted_file_with_duplicate_commit_time_is_rejected (__main__.StoreChronologyP004Tests.test_20_corrupted_file_with_duplicate_commit_time_is_rejected) ... /home/claude/drive-in/v2repo/diyar/records.py:159: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpdpe18as_/records.jsonl' mode='r' encoding='utf-8'>
+  rows = [json.loads(line) for line in open(path)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_21_corrupted_file_with_invalid_date_is_rejected (__main__.StoreChronologyP004Tests.test_21_corrupted_file_with_invalid_date_is_rejected) ... /home/claude/drive-in/v2repo/diyar/records.py:159: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmp5zb65nxp/records.jsonl' mode='r' encoding='utf-8'>
+  rows = [json.loads(line) for line in open(path)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_22_leap_day_canonical_accepted (__main__.StoreChronologyP004Tests.test_22_leap_day_canonical_accepted) ... ok
+test_23_safely_reject_non_dict (__main__.StoreChronologyP004Tests.test_23_safely_reject_non_dict) ... ok
+test_24_multiple_corrections_preserve_bitemporal_semantics (__main__.StoreChronologyP004Tests.test_24_multiple_corrections_preserve_bitemporal_semantics) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.011s
+
+OK

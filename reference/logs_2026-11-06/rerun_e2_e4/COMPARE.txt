@@ -1,0 +1,22 @@
+E2-E4 re-run from the 3 raw BDG2 files, 6 November 2026 (Python 3.13.18, numpy 2.5.3, pandas 3.0.5).
+Input check (sha256sum -c data_manifest.sha256):
+  data/metadata/metadata.csv: OK
+  data/weather/weather.csv: OK
+  data/meters/cleaned/electricity_cleaned.csv: OK
+
+Commands: run_all.sh, then e2_out_of_time.py and e3a_extra.py on the regenerated e3_fox_daily.npz.
+
+Regenerated file vs published results/ file (cmp, byte for byte):
+  e2_baseline_stats.json   IDENTICAL  sha256 8defa7b7167697ce
+  e2_summary.json          IDENTICAL  sha256 a7cec3ee329ae4b0
+  e2_g14.csv               IDENTICAL  sha256 20c54e0c13990948
+  e2_monthly_all.csv       IDENTICAL  sha256 d266d7b9458e43d7
+  e2_monthly_focus.csv     IDENTICAL  sha256 27c4d0244840ff66
+  e2_out_of_time.json      IDENTICAL  sha256 18765c8c51340d92
+  e3a_results.json         IDENTICAL  sha256 acec1d092043c753
+  e3a_quarterly.json       IDENTICAL  sha256 382269a03d50169c
+  e3a_extra.json           IDENTICAL  sha256 186fad28685ed567
+  e3b_results.json         IDENTICAL  sha256 3c515ba83cb24bae
+  e4_results.json          IDENTICAL  sha256 689a70a30e2719e1
+
+E1 (e1_storage.py) was not re-run: its channel census reads all BDG2 meter types, not only the 3 files in data_manifest.sha256.

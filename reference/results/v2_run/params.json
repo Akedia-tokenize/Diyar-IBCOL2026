@@ -1,0 +1,24 @@
+{
+ "site": "Fox",
+ "buildings": [
+  "Fox_office_Joy",
+  "Fox_education_Wendell",
+  "Fox_assembly_Renna"
+ ],
+ "alpha": 0.05,
+ "window": 28,
+ "report_root": "2017-02-04T23:59",
+ "outage": {
+  "building": "Fox_office_Joy",
+  "day": "2017-01-15",
+  "hours": [
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ]
+ },
+ "backfill_tx": "2017-02-20T10:00"
+}

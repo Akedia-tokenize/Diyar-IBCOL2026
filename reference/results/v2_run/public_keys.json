@@ -1,0 +1,25 @@
+{
+ "operator_ecdsa": "03e684a77721d2e3b83451632044e3eb9938b40f211643e1ec9be22495765b7fb1",
+ "operator_slh": "833b89ac29e01f7982459c39ecfd7ec73c9a8f8c2100a68a050164f49a32ac597d3dc6e8511db298275c686c250fed50d9367c9a798fc9552785eebd11c45d38",
+ "slh_param": "sha2_256s",
+ "devices": {
+  "meter-000": "031fe15dce3f5fa02b30a6af00e061ff8e37467fc83b4aaa5d071bc0604aed57fc",
+  "meter-001": "02429231e6da0d3c76b509ae59c5082abf8c21df2e752ca81b0f9f7dc55e3b3d76",
+  "meter-002": "0214976ef2da90720867fdb5e646d0c8976a045e1ce9c777addcb62b7910fa8287"
+ },
+ "issuers": {
+  "weather-service": {
+   "weather-key-01": "03b597c17c99c3f4e716e8baecb39438eec6ca884cdbdc58aaa213c0d69cd7ee2d"
+  },
+  "land-registry": {
+   "registry-key-01": "03dc6d78a0c0d195f4eeb91118daaf8444e05e29c9d4703dfed94816b7e47f2d03"
+  }
+ },
+ "issuer_keys_format": "issuer-keyid-v2",
+ "installers": {
+  "independent-installer": {
+   "installer-key-01": "03c0eef54b04bffff3421bdbd0049507e6ed1cecf472d4ab6e314df463cbd0c46a"
+  }
+ },
+ "installer_pins_format": "installer-keyid-v2 (DEMO; NOT independently trusted)"
+}

@@ -1,0 +1,16 @@
+{
+ "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+ "source_sha256": "f2827fe9df9d47ff33d226166ae938dc632eaf48a0e34420f5850a8bbe059c9c",
+ "runtime_sha256_masked": "9d49ba161b05c11db1b8de51cc0375317163d5bc0bf15ae9e1b7094ca99190d3",
+ "anchored_topic": "0e56cecc6f7e15cf634b1e758cd88db688d2577468035096bafac33043458f72",
+ "deploy_gas": 427275,
+ "first_anchor_gas": 92575,
+ "typical_anchor_gas": 58929,
+ "batch_91_gas": 2586922,
+ "batch_per_day_gas": 28428,
+ "last_entry": "f6e9dfa4a86e72b744bd0d0447844ef11dff3ad1ebf4c47ff145cd9e404b77dd",
+ "tests": {
+  "pass": 17,
+  "fail": 0
+ }
+}

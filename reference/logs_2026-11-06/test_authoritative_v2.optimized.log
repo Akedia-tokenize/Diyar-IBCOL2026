@@ -1,0 +1,37 @@
+test_01_valid_v2_record_has_explicit_version_and_A2 (__main__.AuthoritativeFeedV2Tests.test_01_valid_v2_record_has_explicit_version_and_A2) ... ok
+test_02_unit_relabel_m2_to_kwh_rejected (__main__.AuthoritativeFeedV2Tests.test_02_unit_relabel_m2_to_kwh_rejected) ... ok
+test_03_validity_start_and_end_relabel_rejected (__main__.AuthoritativeFeedV2Tests.test_03_validity_start_and_end_relabel_rejected) ... ok
+test_04_field_id_and_numeric_value_relabel_rejected (__main__.AuthoritativeFeedV2Tests.test_04_field_id_and_numeric_value_relabel_rejected) ... ok
+test_05_issuer_identity_and_key_rotation_id_are_signed (__main__.AuthoritativeFeedV2Tests.test_05_issuer_identity_and_key_rotation_id_are_signed) ... ok
+test_06_no_issuer_pins_is_fail_closed (__main__.AuthoritativeFeedV2Tests.test_06_no_issuer_pins_is_fail_closed) ... ok
+test_07_fake_authority_pk_rejected_even_with_valid_ecdsa (__main__.AuthoritativeFeedV2Tests.test_07_fake_authority_pk_rejected_even_with_valid_ecdsa) ... ok
+test_08_bad_or_unknown_key_material_fails (__main__.AuthoritativeFeedV2Tests.test_08_bad_or_unknown_key_material_fails) ... ok
+test_09_date_rejects_bad_formats_reverse_or_invalid (__main__.AuthoritativeFeedV2Tests.test_09_date_rejects_bad_formats_reverse_or_invalid) ... ok
+test_10_nonfinite_values_and_missing_unit_rejected (__main__.AuthoritativeFeedV2Tests.test_10_nonfinite_values_and_missing_unit_rejected) ... ok
+test_11_replay_checks_metadata_not_just_value (__main__.AuthoritativeFeedV2Tests.test_11_replay_checks_metadata_not_just_value) ... ok
+test_12_replay_without_pinned_registry_does_not_trust_self_published_key (__main__.AuthoritativeFeedV2Tests.test_12_replay_without_pinned_registry_does_not_trust_self_published_key) ... ok
+test_13_v1_signature_rejected_at_v2_intake (__main__.AuthoritativeFeedV2Tests.test_13_v1_signature_rejected_at_v2_intake) ... ok
+test_14_unknown_feed_adapter_cannot_escape_a2_audit (__main__.AuthoritativeFeedV2Tests.test_14_unknown_feed_adapter_cannot_escape_a2_audit) ... ok
+test_15_explicit_legacy_mode_only_for_anchored_archive (__main__.AuthoritativeFeedV2Tests.test_15_explicit_legacy_mode_only_for_anchored_archive) ... /home/claude/drive-in/v2repo/diyar/records.py:159: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/claude/drive-in/v2repo/results/prototype/records.jsonl' mode='r' encoding='utf-8'>
+  rows = [json.loads(line) for line in open(path)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/claude/drive-in/v2repo/diyar/replay.py:28: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/claude/drive-in/v2repo/results/prototype/ledger.json' mode='r' encoding='utf-8'>
+  "ledger": json.load(open(out_dir / "ledger.json")),
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/claude/drive-in/v2repo/diyar/replay.py:29: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/claude/drive-in/v2repo/results/prototype/public_keys.json' mode='r' encoding='utf-8'>
+  "keys": json.load(open(out_dir / "public_keys.json")),
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/claude/drive-in/v2repo/diyar/replay.py:30: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/claude/drive-in/v2repo/results/prototype/params.json' mode='r' encoding='utf-8'>
+  "params": json.load(open(out_dir / "params.json")),
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_16_v2_record_is_committed_and_provable (__main__.AuthoritativeFeedV2Tests.test_16_v2_record_is_committed_and_provable) ... ok
+test_17_transaction_time_is_operator_committed_not_issuer_signed (__main__.AuthoritativeFeedV2Tests.test_17_transaction_time_is_operator_committed_not_issuer_signed) ... ok
+test_18_unpinned_publication_key_replacement_fails_replay (__main__.AuthoritativeFeedV2Tests.test_18_unpinned_publication_key_replacement_fails_replay) ... ok
+test_19_key_rotation_is_scoped_by_issuer_and_key_id (__main__.AuthoritativeFeedV2Tests.test_19_key_rotation_is_scoped_by_issuer_and_key_id) ... ok
+test_20_schema_version_is_part_of_signed_meaning (__main__.AuthoritativeFeedV2Tests.test_20_schema_version_is_part_of_signed_meaning) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 2.121s
+
+OK

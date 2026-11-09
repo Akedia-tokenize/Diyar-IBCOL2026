@@ -1,0 +1,3 @@
+data/metadata/metadata.csv: OK
+data/weather/weather.csv: OK
+data/meters/cleaned/electricity_cleaned.csv: OK

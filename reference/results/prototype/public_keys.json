@@ -1,0 +1,14 @@
+{
+ "operator_ecdsa": "034075eaacab01de71595e9c8c383b60f97889cc24e381d92a7bd71198b05ee26a",
+ "operator_slh": "f4838a066dd9d5ce4fe5ea331088afc8aa1aa99ca948a12a294eb4ccd8f2966bd274077f82edb42705124f321f633247a790c1a5e8cd899762aa6a1d3df0ebee",
+ "slh_param": "sha2_256s",
+ "devices": {
+  "meter-000": "0209f9e0f091484122baf0ad95dfdcc90db441fc0de423d7a4ef1a5f674ee1e4f0",
+  "meter-001": "026224402b15fbc1f11d687e0a1ef2252ccde0f05e48c68f0f91347aaf0194bd29",
+  "meter-002": "0388249cdbdc5c49c4d076018adc8cde429d31b8d489add6982c53bfd07ff38ff2"
+ },
+ "issuers": {
+  "weather-service": "0304be8857ef09203ceac0f2a0866f7ad26c712141da7fd009d9f282dcb5b09501",
+  "land-registry": "02fe886c8de8d5df9f2d0793199b0ed7f905d26df2932c6794b28fe467cbbe5538"
+ }
+}

@@ -1,0 +1,19 @@
+{'manipulation': 'shave', 'size': 0.025, 'manipulated_buildings': 1, 'power_one_sided': 0.076, 'power_two_sided': 0.028, 'false_flag_one_sided': 0.047, 'false_flag_two_sided': 0.047}
+{'manipulation': 'shave', 'size': 0.05, 'manipulated_buildings': 1, 'power_one_sided': 0.099, 'power_two_sided': 0.035, 'false_flag_one_sided': 0.047, 'false_flag_two_sided': 0.047}
+{'manipulation': 'shave', 'size': 0.1, 'manipulated_buildings': 1, 'power_one_sided': 0.189, 'power_two_sided': 0.022, 'false_flag_one_sided': 0.046, 'false_flag_two_sided': 0.047}
+{'manipulation': 'shave', 'size': 0.15, 'manipulated_buildings': 1, 'power_one_sided': 0.375, 'power_two_sided': 0.055, 'false_flag_one_sided': 0.044, 'false_flag_two_sided': 0.047}
+{'manipulation': 'shave', 'size': 0.2, 'manipulated_buildings': 1, 'power_one_sided': 0.666, 'power_two_sided': 0.094, 'false_flag_one_sided': 0.041, 'false_flag_two_sided': 0.047}
+{'manipulation': 'shave', 'size': 0.3, 'manipulated_buildings': 1, 'power_one_sided': 0.886, 'power_two_sided': 0.434, 'false_flag_one_sided': 0.039, 'false_flag_two_sided': 0.043}
+{'manipulation': 'shave', 'size': 0.4, 'manipulated_buildings': 1, 'power_one_sided': 0.972, 'power_two_sided': 0.846, 'false_flag_one_sided': 0.038, 'false_flag_two_sided': 0.04}
+{'manipulation': 'relocate', 'size': 0.025, 'manipulated_buildings': 1, 'power_one_sided': 0.207, 'power_two_sided': 0.134, 'false_flag_one_sided': 0.046, 'false_flag_two_sided': 0.046}
+{'manipulation': 'relocate', 'size': 0.05, 'manipulated_buildings': 1, 'power_one_sided': 0.233, 'power_two_sided': 0.148, 'false_flag_one_sided': 0.045, 'false_flag_two_sided': 0.046}
+{'manipulation': 'relocate', 'size': 0.1, 'manipulated_buildings': 1, 'power_one_sided': 0.329, 'power_two_sided': 0.134, 'false_flag_one_sided': 0.044, 'false_flag_two_sided': 0.046}
+{'manipulation': 'relocate', 'size': 0.15, 'manipulated_buildings': 1, 'power_one_sided': 0.459, 'power_two_sided': 0.187, 'false_flag_one_sided': 0.043, 'false_flag_two_sided': 0.046}
+{'manipulation': 'relocate', 'size': 0.2, 'manipulated_buildings': 1, 'power_one_sided': 0.572, 'power_two_sided': 0.228, 'false_flag_one_sided': 0.042, 'false_flag_two_sided': 0.045}
+{'manipulation': 'relocate', 'size': 0.3, 'manipulated_buildings': 1, 'power_one_sided': 0.793, 'power_two_sided': 0.453, 'false_flag_one_sided': 0.04, 'false_flag_two_sided': 0.043}
+{'manipulation': 'relocate', 'size': 0.4, 'manipulated_buildings': 1, 'power_one_sided': 0.92, 'power_two_sided': 0.752, 'false_flag_one_sided': 0.039, 'false_flag_two_sided': 0.04}
+{'manipulation': 'shave', 'size': 0.2, 'manipulated_buildings': 1, 'power_one_sided': 0.7, 'power_two_sided': 0.117, 'false_flag_one_sided': 0.041, 'false_flag_two_sided': 0.047, 'prevalence': 0.01}
+{'manipulation': 'shave', 'size': 0.2, 'manipulated_buildings': 5, 'power_one_sided': 0.485, 'power_two_sided': 0.097, 'false_flag_one_sided': 0.026, 'false_flag_two_sided': 0.045, 'prevalence': 0.05}
+{'manipulation': 'shave', 'size': 0.2, 'manipulated_buildings': 11, 'power_one_sided': 0.315, 'power_two_sided': 0.081, 'false_flag_one_sided': 0.016, 'false_flag_two_sided': 0.043, 'prevalence': 0.1}
+{'manipulation': 'shave', 'size': 0.2, 'manipulated_buildings': 21, 'power_one_sided': 0.197, 'power_two_sided': 0.056, 'false_flag_one_sided': 0.01, 'false_flag_two_sided': 0.045, 'prevalence': 0.2}
+{'clean_quarter_drift_sd': 0.133, 'clean_quarter_drift_p5': -0.1503, 'clean_quarter_drift_median': 0.0001}

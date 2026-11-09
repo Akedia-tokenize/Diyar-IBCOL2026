@@ -1,0 +1,82 @@
+test_01_true_binding_accepts_24_signed_hours (__main__.MeterInstallationV2Tests.test_01_true_binding_accepts_24_signed_hours) ... ok
+test_02_cert_issued_by_trusted_installer_is_B_not_A1 (__main__.MeterInstallationV2Tests.test_02_cert_issued_by_trusted_installer_is_B_not_A1) ... ok
+test_03_no_cert_fails_closed (__main__.MeterInstallationV2Tests.test_03_no_cert_fails_closed) ... ok
+test_04_self_published_installer_key_is_not_trust (__main__.MeterInstallationV2Tests.test_04_self_published_installer_key_is_not_trust) ... ok
+test_05_wrong_meter_device_id_cannot_borrow_cert (__main__.MeterInstallationV2Tests.test_05_wrong_meter_device_id_cannot_borrow_cert) ... ok
+test_06_wrong_key_cannot_borrow_cert (__main__.MeterInstallationV2Tests.test_06_wrong_key_cannot_borrow_cert) ... ok
+test_07_wrong_building_cannot_borrow_cert (__main__.MeterInstallationV2Tests.test_07_wrong_building_cannot_borrow_cert) ... ok
+test_08_unrelated_installed_meter_cannot_raise_grade (__main__.MeterInstallationV2Tests.test_08_unrelated_installed_meter_cannot_raise_grade) ... ok
+test_09_two_active_meters_same_building_channel_conflict (__main__.MeterInstallationV2Tests.test_09_two_active_meters_same_building_channel_conflict) ... ok
+test_10_same_device_bound_to_second_building_conflict (__main__.MeterInstallationV2Tests.test_10_same_device_bound_to_second_building_conflict) ... ok
+test_11_tamper_building_in_cert_breaks_signature (__main__.MeterInstallationV2Tests.test_11_tamper_building_in_cert_breaks_signature) ... ok
+test_12_tamper_cert_device_pk_breaks_signature (__main__.MeterInstallationV2Tests.test_12_tamper_cert_device_pk_breaks_signature) ... ok
+test_13_tamper_cert_valid_from_breaks_signature (__main__.MeterInstallationV2Tests.test_13_tamper_cert_valid_from_breaks_signature) ... ok
+test_14_tamper_cert_unit_breaks_signature (__main__.MeterInstallationV2Tests.test_14_tamper_cert_unit_breaks_signature) ... ok
+test_15_wrong_channel_or_unit_refused (__main__.MeterInstallationV2Tests.test_15_wrong_channel_or_unit_refused) ... ok
+test_16_expired_cert_does_not_authorize_2017_readings (__main__.MeterInstallationV2Tests.test_16_expired_cert_does_not_authorize_2017_readings) ... ok
+test_17_future_cert_does_not_authorize_2017_readings (__main__.MeterInstallationV2Tests.test_17_future_cert_does_not_authorize_2017_readings) ... ok
+test_18_retrospectively_uploaded_install_cannot_authenticate_older_intake (__main__.MeterInstallationV2Tests.test_18_retrospectively_uploaded_install_cannot_authenticate_older_intake) ... ok
+test_19_valid_revocation_blocks_at_effective_date (__main__.MeterInstallationV2Tests.test_19_valid_revocation_blocks_at_effective_date) ... ok
+test_20_tampered_revocation_fails_closed (__main__.MeterInstallationV2Tests.test_20_tampered_revocation_fails_closed) ... ok
+test_21_fake_revocation_issuer_rejected (__main__.MeterInstallationV2Tests.test_21_fake_revocation_issuer_rejected) ... ok
+test_22_intake_does_not_accept_empty_or_fully_corrupt_day (__main__.MeterInstallationV2Tests.test_22_intake_does_not_accept_empty_or_fully_corrupt_day) ... ok
+test_23_meter_hour_out_of_period_fails (__main__.MeterInstallationV2Tests.test_23_meter_hour_out_of_period_fails) ... ok
+test_24_duplicate_hour_fails (__main__.MeterInstallationV2Tests.test_24_duplicate_hour_fails) ... ok
+test_25_meter_value_tamper_invalidates_evidence (__main__.MeterInstallationV2Tests.test_25_meter_value_tamper_invalidates_evidence) ... ok
+test_26_meter_record_unit_tamper_is_rejected (__main__.MeterInstallationV2Tests.test_26_meter_record_unit_tamper_is_rejected) ... ok
+test_27_meter_record_cert_id_tamper_is_rejected (__main__.MeterInstallationV2Tests.test_27_meter_record_cert_id_tamper_is_rejected) ... ok
+test_28_meter_record_field_relabel_is_rejected (__main__.MeterInstallationV2Tests.test_28_meter_record_field_relabel_is_rejected) ... ok
+test_29_snapshot_of_v2_evidence_can_be_rechecked_without_operator_key (__main__.MeterInstallationV2Tests.test_29_snapshot_of_v2_evidence_can_be_rechecked_without_operator_key) ... ok
+test_30_signed_merkle_root_commits_certificate_and_reading (__main__.MeterInstallationV2Tests.test_30_signed_merkle_root_commits_certificate_and_reading) ... ok
+test_31_historical_archive_requires_explicit_legacy_opt_in (__main__.MeterInstallationV2Tests.test_31_historical_archive_requires_explicit_legacy_opt_in) ... /home/claude/drive-in/v2repo/diyar/records.py:159: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/claude/drive-in/v2repo/results/prototype/records.jsonl' mode='r' encoding='utf-8'>
+  rows = [json.loads(line) for line in open(path)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/claude/drive-in/v2repo/diyar/replay.py:28: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/claude/drive-in/v2repo/results/prototype/ledger.json' mode='r' encoding='utf-8'>
+  "ledger": json.load(open(out_dir / "ledger.json")),
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/claude/drive-in/v2repo/diyar/replay.py:29: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/claude/drive-in/v2repo/results/prototype/public_keys.json' mode='r' encoding='utf-8'>
+  "keys": json.load(open(out_dir / "public_keys.json")),
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/claude/drive-in/v2repo/diyar/replay.py:30: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/claude/drive-in/v2repo/results/prototype/params.json' mode='r' encoding='utf-8'>
+  "params": json.load(open(out_dir / "params.json")),
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_32_real_published_meter_series_with_synthetic_installer_certificate (__main__.MeterInstallationV2Tests.test_32_real_published_meter_series_with_synthetic_installer_certificate) ... /home/claude/drive-in/v2repo/diyar/records.py:159: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/claude/drive-in/v2repo/results/prototype/records.jsonl' mode='r' encoding='utf-8'>
+  rows = [json.loads(line) for line in open(path)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/claude/drive-in/v2repo/diyar/replay.py:28: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/claude/drive-in/v2repo/results/prototype/ledger.json' mode='r' encoding='utf-8'>
+  "ledger": json.load(open(out_dir / "ledger.json")),
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/claude/drive-in/v2repo/diyar/replay.py:29: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/claude/drive-in/v2repo/results/prototype/public_keys.json' mode='r' encoding='utf-8'>
+  "keys": json.load(open(out_dir / "public_keys.json")),
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/claude/drive-in/v2repo/diyar/replay.py:30: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/claude/drive-in/v2repo/results/prototype/params.json' mode='r' encoding='utf-8'>
+  "params": json.load(open(out_dir / "params.json")),
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_33_conflicting_meter_in_historical_report_blocks_financial_metric (__main__.MeterInstallationV2Tests.test_33_conflicting_meter_in_historical_report_blocks_financial_metric) ... /home/claude/drive-in/v2repo/diyar/records.py:159: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/claude/drive-in/v2repo/results/prototype/records.jsonl' mode='r' encoding='utf-8'>
+  rows = [json.loads(line) for line in open(path)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/claude/drive-in/v2repo/diyar/replay.py:28: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/claude/drive-in/v2repo/results/prototype/ledger.json' mode='r' encoding='utf-8'>
+  "ledger": json.load(open(out_dir / "ledger.json")),
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/claude/drive-in/v2repo/diyar/replay.py:29: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/claude/drive-in/v2repo/results/prototype/public_keys.json' mode='r' encoding='utf-8'>
+  "keys": json.load(open(out_dir / "public_keys.json")),
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/claude/drive-in/v2repo/diyar/replay.py:30: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/claude/drive-in/v2repo/results/prototype/params.json' mode='r' encoding='utf-8'>
+  "params": json.load(open(out_dir / "params.json")),
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_34_index_field_relabel_cannot_pass_verifier (__main__.MeterInstallationV2Tests.test_34_index_field_relabel_cannot_pass_verifier) ... ok
+test_35_unknown_meter_adapter_fails_closed (__main__.MeterInstallationV2Tests.test_35_unknown_meter_adapter_fails_closed) ... ok
+test_36_unknown_certificate_adapter_fails_closed (__main__.MeterInstallationV2Tests.test_36_unknown_certificate_adapter_fails_closed) ... ok
+test_37_certificate_id_immutable_in_bitemporal_store (__main__.MeterInstallationV2Tests.test_37_certificate_id_immutable_in_bitemporal_store) ... ok
+test_38_retroactive_revoke_invalidates_new_report_not_old_asof (__main__.MeterInstallationV2Tests.test_38_retroactive_revoke_invalidates_new_report_not_old_asof) ... ok
+test_39_distinct_nonoverlapping_meter_replacements_accepted (__main__.MeterInstallationV2Tests.test_39_distinct_nonoverlapping_meter_replacements_accepted) ... ok
+test_40_unauthorized_cert_signature_cannot_be_recorded (__main__.MeterInstallationV2Tests.test_40_unauthorized_cert_signature_cannot_be_recorded) ... ok
+test_41_revocation_id_immutable_in_bitemporal_store (__main__.MeterInstallationV2Tests.test_41_revocation_id_immutable_in_bitemporal_store) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 0.532s
+
+OK

@@ -1,0 +1,12 @@
+/home/claude/drive-in/v2repo/src/e3a_gates.py:65: RuntimeWarning: All-NaN slice encountered
+  med = np.nanmedian(Dm, axis=0)
+{'manipulation': 'shave', 'size': 0.05, 'days_scored': 90, 'sens_fast': 0.055, 'sens_slow': 0.041, 'sens_either': 0.093, 'fp_fast': 0.053, 'fp_slow': 0.047, 'fp_either': 0.097}
+{'manipulation': 'shave', 'size': 0.1, 'days_scored': 90, 'sens_fast': 0.06, 'sens_slow': 0.062, 'sens_either': 0.117, 'fp_fast': 0.053, 'fp_slow': 0.047, 'fp_either': 0.097}
+{'manipulation': 'shave', 'size': 0.2, 'days_scored': 90, 'sens_fast': 0.074, 'sens_slow': 0.147, 'sens_either': 0.211, 'fp_fast': 0.053, 'fp_slow': 0.046, 'fp_either': 0.096}
+{'manipulation': 'burst', 'size': 0.05, 'days_scored': 7, 'sens_fast': 0.091, 'sens_slow': 0.039, 'sens_either': 0.126, 'fp_fast': 0.055, 'fp_slow': 0.047, 'fp_either': 0.099}
+{'manipulation': 'burst', 'size': 0.1, 'days_scored': 7, 'sens_fast': 0.141, 'sens_slow': 0.038, 'sens_either': 0.173, 'fp_fast': 0.055, 'fp_slow': 0.047, 'fp_either': 0.099}
+{'manipulation': 'burst', 'size': 0.2, 'days_scored': 7, 'sens_fast': 0.254, 'sens_slow': 0.056, 'sens_either': 0.296, 'fp_fast': 0.055, 'fp_slow': 0.047, 'fp_either': 0.099}
+{'manipulation': 'relocate', 'size': 0.05, 'days_scored': 90, 'sens_fast': 0.069, 'sens_slow': 0.121, 'sens_either': 0.181, 'fp_fast': 0.053, 'fp_slow': 0.046, 'fp_either': 0.096}
+{'manipulation': 'relocate', 'size': 0.1, 'days_scored': 90, 'sens_fast': 0.071, 'sens_slow': 0.124, 'sens_either': 0.186, 'fp_fast': 0.053, 'fp_slow': 0.047, 'fp_either': 0.097}
+{'manipulation': 'relocate', 'size': 0.2, 'days_scored': 90, 'sens_fast': 0.073, 'sens_slow': 0.174, 'sens_either': 0.235, 'fp_fast': 0.053, 'fp_slow': 0.046, 'fp_either': 0.096}
+{"clean_fast_rate": 0.0541, "clean_slow_rate": 0.0472, "slow_flags_concentration_top10pct_buildings": 0.827, "slow_buildings_never_flagged": 0.802}

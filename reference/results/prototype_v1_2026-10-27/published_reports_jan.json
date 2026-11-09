@@ -1,0 +1,125 @@
+{
+ "Fox_office_Joy": {
+  "building": "Fox_office_Joy",
+  "month": "2017-01",
+  "actual_kwh": {
+   "value": 112692.56,
+   "grade": "A1"
+  },
+  "baseline_kwh": {
+   "value": 111767.923,
+   "grade": "A2"
+  },
+  "performance_vs_baseline": {
+   "value": 0.00827,
+   "grade": "A2"
+  },
+  "coverage": {
+   "value": 0.99059,
+   "grade": "A1"
+  },
+  "gate_flags": {
+   "value": 1,
+   "grade": "derived"
+  },
+  "kwh_per_m2": {
+   "value": 17.12393,
+   "grade": "A2"
+  },
+  "kwh_per_occupant": {
+   "value": 469.552,
+   "grade": "C"
+  },
+  "residual_assumptions": {
+   "actual_kwh": "where the device is",
+   "baseline_kwh": "correctness of the authoritative source",
+   "performance_vs_baseline": "correctness of the authoritative source",
+   "coverage": "where the device is",
+   "kwh_per_m2": "correctness of the authoritative source",
+   "kwh_per_occupant": "everything"
+  },
+  "output_hash": "62b1752f339dc7b4f74a71a7add760a83e736cb4a2679379bbac008cabd4db9e"
+ },
+ "Fox_education_Wendell": {
+  "building": "Fox_education_Wendell",
+  "month": "2017-01",
+  "actual_kwh": {
+   "value": 387773.71,
+   "grade": "A1"
+  },
+  "baseline_kwh": {
+   "value": 393300.989,
+   "grade": "A2"
+  },
+  "performance_vs_baseline": {
+   "value": -0.01405,
+   "grade": "A2"
+  },
+  "coverage": {
+   "value": 1.0,
+   "grade": "A1"
+  },
+  "gate_flags": {
+   "value": 0,
+   "grade": "derived"
+  },
+  "kwh_per_m2": {
+   "value": 19.00647,
+   "grade": "A2"
+  },
+  "kwh_per_occupant": {
+   "value": 945.79,
+   "grade": "C"
+  },
+  "residual_assumptions": {
+   "actual_kwh": "where the device is",
+   "baseline_kwh": "correctness of the authoritative source",
+   "performance_vs_baseline": "correctness of the authoritative source",
+   "coverage": "where the device is",
+   "kwh_per_m2": "correctness of the authoritative source",
+   "kwh_per_occupant": "everything"
+  },
+  "output_hash": "c1eb5f77b4d4f4a313b8db6cbe44cd53ba595f0e2379d9f94c7608c6e27552a1"
+ },
+ "Fox_assembly_Renna": {
+  "building": "Fox_assembly_Renna",
+  "month": "2017-01",
+  "actual_kwh": {
+   "value": 287145.39,
+   "grade": "A1"
+  },
+  "baseline_kwh": {
+   "value": 284402.119,
+   "grade": "A2"
+  },
+  "performance_vs_baseline": {
+   "value": 0.00965,
+   "grade": "A2"
+  },
+  "coverage": {
+   "value": 1.0,
+   "grade": "A1"
+  },
+  "gate_flags": {
+   "value": 0,
+   "grade": "derived"
+  },
+  "kwh_per_m2": {
+   "value": 17.22383,
+   "grade": "A2"
+  },
+  "kwh_per_occupant": {
+   "value": null,
+   "grade": null,
+   "absent": "proved by non-membership"
+  },
+  "residual_assumptions": {
+   "actual_kwh": "where the device is",
+   "baseline_kwh": "correctness of the authoritative source",
+   "performance_vs_baseline": "correctness of the authoritative source",
+   "coverage": "where the device is",
+   "kwh_per_m2": "correctness of the authoritative source"
+  },
+  "output_hash": "d3a60856e062a84506fb229bb5de79a18361c5f8bf596cbbe35c007e94e2f449"
+ }
+}

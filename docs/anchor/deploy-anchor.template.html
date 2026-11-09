@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'"/>
+<meta name="referrer" content="no-referrer"/>
+<link rel="icon" href="data:,"/>
+<title>DIYAR anchor · operator tool</title>
+<style>
+:root{color-scheme:light;--bg:#f7f5fb;--panel:#ffffff;--line:#ddd6ea;--text:#1f1830;--muted:#5d5470;--accent:#5b34c4;--accent-ink:#ffffff;--ok:#0f7a45;--bad:#b42318;--code:#efeaf8}
+@media (prefers-color-scheme:dark){:root{color-scheme:dark;--bg:#100d1b;--panel:#191426;--line:#342b4a;--text:#f4f0fb;--muted:#b7aecb;--accent:#a68bf5;--accent-ink:#140f22;--ok:#6fe0a0;--bad:#ff9aa2;--code:#241d36}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;padding-block:32px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{max-width:760px;margin:0 auto;display:grid;gap:14px}
+header{display:grid;gap:6px;margin-bottom:6px}
+h1{font-size:26px;line-height:1.25;margin:0;text-wrap:balance}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;display:grid;gap:10px;min-width:0}
+.step{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.card b{font-size:17px}
+button{font:inherit;font-weight:650;border-radius:8px;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);padding:9px 16px;cursor:pointer;justify-self:start}
+button:disabled{background:transparent;color:var(--muted);border-color:var(--line);cursor:not-allowed}
+button.link{background:none;border:0;color:var(--accent);padding:0;font-weight:600;text-decoration:underline}
+code,textarea,input{font:13px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace}
+code{background:var(--code);border-radius:4px;padding:1px 5px;overflow-wrap:anywhere}
+textarea{width:100%;min-height:230px;background:transparent;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:10px}
+input{width:100%;background:transparent;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.row input{flex:1 1 280px;width:auto}
+.muted{color:var(--muted);font-size:14px}.status{font-size:14px;overflow-wrap:anywhere}
+.ok{color:var(--ok);font-weight:650}.bad{color:var(--bad);font-weight:650}
+a{color:var(--accent)}
+details summary{cursor:pointer;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<main>
+<header>
+<div class="step">DIYAR · Sepolia testnet · operator tool</div>
+<h1>Deploy the anchor and anchor the __DAYS__ signed days</h1>
+<p class="muted">Two transactions from your own wallet: deploy DiyarAnchor, then anchor the reference run's __DAYS__ daily roots in one call. Sepolia test ether only, no real money. MetaMask signs; this page never sees a key and makes no network request of its own.</p>
+</header>
+
+<section class="card"><div class="step">Step 1</div><b>Connect MetaMask on Sepolia</b>
+<div class="muted">The page asks MetaMask to switch to Sepolia (chain 11155111) and refuses to send anything on any other chain.</div>
+<button id="connect">Connect MetaMask</button><div id="s1" class="status muted">Not connected.</div></section>
+
+<section class="card"><div class="step">Step 2</div><b>Deploy DiyarAnchor</b>
+<div class="muted">Init code __INITBYTES__ bytes, compiled from DiyarAnchor.sol (SHA-256 <code>__SRCSHORT__</code>) with solc __COMPILER__. About __GAS_DEPLOY__ gas on a local EVM.</div>
+<button id="deploy" disabled>Deploy</button><div id="s2" class="status muted"></div></section>
+
+<section class="card"><div class="step">Step 3</div><b>Anchor all __DAYS__ days in one transaction</b>
+<div class="muted">Calls <code>anchorBatch</code> with the days __FIRST__ to __LAST__ and their signed SMT roots. The contract recomputes every entry as SHA-256(0x20 || day || root || prev), stores each root, and must end on head <code>__HEADSHORT__</code>. About __GAS_BATCH__ gas on a local EVM.</div>
+<button id="anchor" disabled>Anchor __DAYS__ days</button><div id="s3" class="status muted"></div>
+<details><summary>Already anchored from another browser?</summary><div class="row" style="margin-top:8px"><input id="txin" placeholder="0x… anchor transaction hash" aria-label="Anchor transaction hash"/><button id="rebuild" disabled>Rebuild the result</button></div></details></section>
+
+<section class="card"><div class="step">Step 4</div><b>Save the result into the site</b>
+<div class="muted">Replace <code>data/anchor.json</code> in the site folder with this text, or send it to Claude. The site's Verify page then checks it against a public Sepolia node.</div>
+<textarea id="out" readonly placeholder="Appears after step 3." aria-label="anchor.json"></textarea><div class="row"><button id="copy" disabled>Copy</button><span id="s4" class="status muted"></span></div></section>
+
+<p class="muted"><button class="link" id="reset">Forget the stored contract and start over</button></p>
+</main>
+<script>
+const IN = __INPUTS__;
+const SEPOLIA = { chainId: '0xaa36a7', chainName: 'Sepolia', nativeCurrency: { name: 'Sepolia Ether', symbol: 'ETH', decimals: 18 }, rpcUrls: ['https://ethereum-sepolia-rpc.publicnode.com'], blockExplorerUrls: ['https://sepolia.etherscan.io'] };
+const EXPLORER = 'https://sepolia.etherscan.io';
+const $ = (id) => document.getElementById(id);
+const esc = (v) => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const isHex = (v, n) => typeof v === 'string' && new RegExp('^0x[0-9a-fA-F]{' + n + '}$').test(v);
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch { /* storage blocked: the page still works in one sitting */ } },
+  del(k) { try { localStorage.removeItem(k); } catch { /* ignore */ } }
+};
+let from = null;
+let contract = store.get('diyar-anchor-contract'), deployTx = store.get('diyar-anchor-deploytx'), anchorTx = store.get('diyar-anchor-anchortx');
+const req = (method, params = []) => window.ethereum.request({ method, params });
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+const say = (id, html) => { $(id).innerHTML = html; };
+const fail = (id, e) => say(id, `<span class="bad">${esc((e && (e.message || e.reason)) || e)}</span>`);
+const link = (kind, v) => isHex(v, kind === 'tx' ? 64 : 40) ? `<a href="${EXPLORER}/${kind === 'tx' ? 'tx' : 'address'}/${v}" target="_blank" rel="noopener noreferrer">${v.slice(0, 10)}…${v.slice(-6)}</a>` : esc(v);
+const num = (h) => parseInt(h, 16);
+const gas = (h) => num(h).toLocaleString('en-US');
+
+async function onSepolia() {
+  const id = await req('eth_chainId');
+  if (id !== SEPOLIA.chainId) throw new Error(`MetaMask is on chain ${parseInt(id, 16)}, not Sepolia (11155111). Nothing was sent.`);
+}
+async function switchToSepolia() {
+  if (await req('eth_chainId') === SEPOLIA.chainId) return;
+  try { await req('wallet_switchEthereumChain', [{ chainId: SEPOLIA.chainId }]); }
+  catch (e) { if (e && e.code === 4902) await req('wallet_addEthereumChain', [SEPOLIA]); else throw e; }
+  await onSepolia();
+}
+async function receipt(hash, id) {
+  for (let i = 0; i < 200; i++) {
+    const r = await req('eth_getTransactionReceipt', [hash]);
+    if (r) return r;
+    say(id, `Waiting for the transaction to be mined… ${i * 3} s · ${link('tx', hash)}`);
+    await sleep(3000);
+  }
+  throw new Error('Not mined after 10 minutes. Check the transaction on Etherscan, then reload this page.');
+}
+const call = (data) => req('eth_call', [{ to: contract, data }, 'latest']);
+async function state() { return { head: String(await call(IN.selectors.head)).toLowerCase(), count: num(await call(IN.selectors.count)) }; }
+
+$('connect').onclick = async () => {
+  if (!window.ethereum) {
+    say('s1', '<span class="bad">No wallet found.</span> Install MetaMask in this browser, then reload. A page opened straight from disk (file://) does not see the wallet: serve the folder (VS Code Live Server, or <code>python -m http.server</code>) and open it over http://localhost.');
+    return;
+  }
+  try {
+    [from] = await req('eth_requestAccounts');
+    from = String(from).toLowerCase();
+    await switchToSepolia();
+    const eth = Number(BigInt(await req('eth_getBalance', [from, 'latest']))) / 1e18;
+    say('s1', `<span class="ok">Connected</span> ${esc(from)} on Sepolia · ${eth.toFixed(4)} test ETH${eth < 0.02 ? ' · <span class="bad">low: get Sepolia test ETH from a faucet first</span>' : ''}`);
+    $('deploy').disabled = false;
+    $('rebuild').disabled = false;
+    if (contract) await resume();
+  } catch (e) { fail('s1', e); }
+};
+async function resume() {
+  const code = await req('eth_getCode', [contract, 'latest']);
+  if (!code || code === '0x') { store.del('diyar-anchor-contract'); contract = null; say('s2', 'The stored contract address has no code on Sepolia. Deploy again.'); return; }
+  say('s2', `<span class="ok">Already deployed</span> ${link('address', contract)}${deployTx ? ' · tx ' + link('tx', deployTx) : ''}`);
+  const s = await state();
+  if (s.count === 0) { $('anchor').disabled = false; return; }
+  if (s.head === IN.expectedHead && s.count === IN.days && anchorTx) { await finish(anchorTx); return; }
+  say('s3', s.head === IN.expectedHead && s.count === IN.days
+    ? '<span class="ok">This contract already holds all the days.</span> Paste the anchor transaction hash below to rebuild the result.'
+    : `<span class="bad">This contract already holds ${s.count} entries that do not end on the expected head.</span> Start over with a new contract.`);
+}
+$('deploy').onclick = async () => {
+  try {
+    $('deploy').disabled = true;
+    await onSepolia();
+    const tx = await req('eth_sendTransaction', [{ from, data: IN.bytecode }]);
+    deployTx = tx; store.set('diyar-anchor-deploytx', tx);
+    const r = await receipt(tx, 's2');
+    if (r.status !== '0x1' || !isHex(r.contractAddress, 40)) throw new Error('The deployment reverted. Nothing was anchored.');
+    contract = r.contractAddress.toLowerCase(); store.set('diyar-anchor-contract', contract);
+    say('s2', `<span class="ok">Deployed</span> ${link('address', contract)} · tx ${link('tx', tx)} · ${gas(r.gasUsed)} gas`);
+    $('anchor').disabled = false;
+  } catch (e) { fail('s2', e); $('deploy').disabled = false; }
+};
+$('anchor').onclick = async () => {
+  try {
+    $('anchor').disabled = true;
+    await onSepolia();
+    const op = String(await call(IN.selectors.operator)).slice(-40).toLowerCase();
+    if ('0x' + op !== from) throw new Error(`The connected account is not this contract's operator (0x${op}). Switch MetaMask to the account that deployed it. Nothing was sent.`);
+    const s = await state();
+    if (s.count !== 0) throw new Error(`This contract already holds ${s.count} entries. Nothing was sent.`);
+    const tx = await req('eth_sendTransaction', [{ from, to: contract, data: IN.batchData }]);
+    anchorTx = tx; store.set('diyar-anchor-anchortx', tx);
+    await finish(tx);
+  } catch (e) { fail('s3', e); $('anchor').disabled = false; }
+};
+$('rebuild').onclick = async () => {
+  const tx = $('txin').value.trim();
+  if (!isHex(tx, 64)) { fail('s3', 'That is not a transaction hash (0x followed by 64 hex characters).'); return; }
+  try {
+    const r = await receipt(tx, 's3');
+    if (!isHex(r.to, 40)) throw new Error('That transaction did not call a contract.');
+    contract = r.to.toLowerCase(); store.set('diyar-anchor-contract', contract);
+    anchorTx = tx; store.set('diyar-anchor-anchortx', tx);
+    await finish(tx);
+  } catch (e) { fail('s3', e); }
+};
+async function finish(tx) {
+  const r = await receipt(tx, 's3');
+  if (r.status !== '0x1') throw new Error('The anchor transaction reverted.');
+  const s = await state();
+  const good = s.head === IN.expectedHead && s.count === IN.days;
+  say('s3', `${good ? '<span class="ok">Anchored</span>' : '<span class="bad">The contract head does not match the ledger</span>'} · tx ${link('tx', tx)} · ${gas(r.gasUsed)} gas · head ${esc(s.head.slice(0, 12))}… · count ${s.count}`);
+  if (!good) return;
+  const block = await req('eth_getBlockByNumber', [r.blockNumber, false]);
+  const dr = deployTx ? await req('eth_getTransactionReceipt', [deployTx]) : null;
+  const deployed = dr && dr.contractAddress && dr.contractAddress.toLowerCase() === contract;
+  const out = {
+    status: 'anchored', network: 'sepolia', chainId: 11155111, contract, operator: String(r.from || from).toLowerCase(),
+    deployTx: deployed ? deployTx : null, deployBlock: deployed ? num(dr.blockNumber) : null,
+    anchorTx: tx, anchorBlock: num(r.blockNumber), anchoredAt: new Date(num(block.timestamp) * 1000).toISOString().replace('.000Z', 'Z'),
+    days: s.count, firstDay: IN.firstDay, lastDay: IN.lastDay, head: s.head,
+    gasDeploy: deployed ? num(dr.gasUsed) : null, gasAnchorBatch: num(r.gasUsed),
+    compiler: IN.compiler, sourceSha256: IN.sourceSha256, explorer: EXPLORER
+  };
+  $('out').value = JSON.stringify(out, null, 1) + '\n';
+  $('copy').disabled = false;
+  say('s4', 'Ready: save it as data/anchor.json.');
+}
+$('copy').onclick = async () => {
+  try { await navigator.clipboard.writeText($('out').value); say('s4', '<span class="ok">Copied.</span> Paste it into data/anchor.json.'); }
+  catch { $('out').focus(); $('out').select(); say('s4', 'Selected: press Ctrl+C to copy.'); }
+};
+$('reset').onclick = () => { for (const k of ['diyar-anchor-contract', 'diyar-anchor-deploytx', 'diyar-anchor-anchortx']) store.del(k); location.reload(); };
+if (window.ethereum && window.ethereum.on) {
+  window.ethereum.on('chainChanged', () => location.reload());
+  window.ethereum.on('accountsChanged', () => location.reload());
+}
+</script>
+</body>
+</html>
