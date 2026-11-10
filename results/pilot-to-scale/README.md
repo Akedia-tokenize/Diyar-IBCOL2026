@@ -1,8 +1,8 @@
 # Pilot-to-Scale financial supplement
 
-**Status: proposed Annex D.1; not yet incorporated into the original v2.7 PDF.**
+**Status: incorporated as Annex D.9 into the consolidated v2.7 + financial extension PDF.** The archived, original v2.7 PDF remains unchanged.
 
-[**Read the proposed financial appendix**](../../paper/Annex-D.1-Pilot-to-Scale-SUPPLEMENT.md) · [**Download the scenario CSV**](scenario_snapshot.csv) · [**Open original cost model**](../../reference-and-tests/DIYAR_cost_model.xlsx)
+[**Read integrated financial appendix**](../../paper/Annex-D.9-Pilot-to-Scale-SUPPLEMENT.md) · [**Download the scenario CSV**](scenario_snapshot.csv) · [**Open original cost model**](../../reference-and-tests/DIYAR_cost_model.xlsx)
 
 This supplement examines what changes when all buildings are onboarded in a program's first year, rather than spreading onboarding across the 10-year amortization period. The published model retains a USD 178.58 normalized annual cost per building at 10,000 buildings.
 

@@ -11,7 +11,7 @@
 
 ## Pilot-to-Scale financial supplement
 
-[Proposed Annex D.1](../paper/Annex-D.1-Pilot-to-Scale-SUPPLEMENT.md) · [Scenario table and financial caveats](pilot-to-scale/README.md). This supplement distinguishes normalized annual costs from first-year onboarding cash and leaves the published v2.7 PDF and original six-sheet model unchanged.
+[Integrated Annex D.9](../paper/Annex-D.9-Pilot-to-Scale-SUPPLEMENT.md) · [Scenario table and financial caveats](pilot-to-scale/README.md). The new consolidated PDF places the financial extension after original Annex D and before Annex E, distinguishing normalized annual costs from first-year onboarding cash. The archived v2.7 PDF and six-sheet model remain unchanged.
 
 ## Figures
 
@@ -31,4 +31,4 @@
 
 The reference reports **17.4%** one-time-calibration alerts on seasonal data against a nominal **5%** and approximately nominal alert rates after recent-window calibration. With one manipulated building among honest peers, the quarterly test reportedly reaches **80% detection** around a **25% under-report** in the studied setup; this is not universal statistical protection. Annual operating cost is estimated near **USD 179/building** under the whitepaper's inspection, onboarding and staffing assumptions, not observed commercial pricing.
 
-These are **reported prototype study findings**, not production validation. Consult [the whitepaper and annexes](../paper/DIYAR%20whitepaper%20v2.7.pdf), [full experiment outputs](../reference-and-tests/results/), [reconciliation](../reference-and-tests/reconciliation.csv) and the [independent verification record](../reference-and-tests/VERIFY_2026-11-06.md) for details. Do not edit highlights manually; rerun and reconcile their source first.
+These are **reported prototype study findings**, not production validation. Consult [the consolidated whitepaper with all annexes](../paper/DIYAR_IBCOL2026_Whitepaper_v2.7_with_Annex_D9_FULL.pdf), [full experiment outputs](../reference-and-tests/results/), [reconciliation](../reference-and-tests/reconciliation.csv) and the [independent verification record](../reference-and-tests/VERIFY_2026-11-06.md) for details. Do not edit highlights manually; rerun and reconcile their source first.

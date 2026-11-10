@@ -5,6 +5,8 @@
 | Artifact | Current label | Where to find it |
 | --- | --- | --- |
 | Whitepaper | v2.7, 10 Nov 2026 | [Paper PDF](../paper/DIYAR%20whitepaper%20v2.7.pdf) |
+| Submission-ready consolidated financial edition | v2.7 + integrated D.9, 10 Nov 2026 (44 pages) | [Full PDF](../paper/DIYAR_IBCOL2026_Whitepaper_v2.7_with_Annex_D9_FULL.pdf) |
+| Consolidated appendices | A–H + D.9, 10 Nov 2026 (38 pages) | [Annex PDF](../paper/DIYAR_IBCOL2026_Annexes_A-H_with_D9.pdf) |
 | Machine-readable manuscript | v2.7 | `../reference-and-tests/paper/DIYAR-whitepaper-v2.7.md` |
 | Python reference implementation | DIYAR-ref v2.1 | [Reference README](../reference-and-tests/README.md) |
 | Reference run | Recomputed from BDG2, 6 Nov 2026 | `../reference-and-tests/results/v2_run/` |

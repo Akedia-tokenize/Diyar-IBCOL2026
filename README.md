@@ -3,13 +3,13 @@
 **Every number carries its evidence.**  
 A provenance-graded evidence layer for sustainability claims in the built environment. **Team Akedia · IBCOL 2026**.
 
-[**Open the live demo**](https://akedia-tokenize.github.io/Diyar-IBCOL2026/) · [**Read the whitepaper (v2.7)**](paper/DIYAR%20whitepaper%20v2.7.pdf)
+[**Open the live demo**](https://akedia-tokenize.github.io/Diyar-IBCOL2026/) · [**Read the whitepaper (v2.7)**](paper/DIYAR_IBCOL2026_Whitepaper_v2.7_with_Annex_D9_FULL.pdf)
 
 ## Five sections of the project
 
 | Section | What belongs here |
 | --- | --- |
-| **01 · [Paper](paper/)** | Six-page whitepaper v2.7 (10 Nov 2026) and annexes A–H. |
+| **01 · [Paper](paper/)** | Six-page main whitepaper v2.7, annexes A–H, plus integrated financial extension D.9. |
 | **02 · [Architecture](architecture/)** | Evidence grades, architecture, implementation status, assumptions and limits. |
 | **03 · [Demo](demo/)** | Guided tour of the deployed website: Owner, Lender, Verify, Replay and Explorer. |
 | **04 · [Reference & Tests](reference-and-tests/)** | Python reference code, Solidity contract, replay tests, experiment scripts, historical logs and reproducibility tools. |
@@ -17,11 +17,13 @@ A provenance-graded evidence layer for sustainability claims in the built enviro
 
 ## IBCOL reviewer quickstart
 
-1. Read [the paper](paper/DIYAR%20whitepaper%20v2.7.pdf) and the [verification model](architecture/verification-model.md).
+1. Read [the paper](paper/DIYAR_IBCOL2026_Whitepaper_v2.7_with_Annex_D9_FULL.pdf) and the [verification model](architecture/verification-model.md).
 2. Open [the demo](demo/) and try **Verify**, **Replay** and the **tamper demonstrations**.
 3. Inspect [the results](results/) and [reproduce them](architecture/reproduce.md) using the source and test package.
 
 The reference demonstration uses historical **Building Data Genome Project 2** measurements from three Fox-site buildings (1 January to 31 March 2017), simulated signer keys and demonstration-only trust pins. This is **not a live utility connection or accredited building assessment**. A valid signature verifies record integrity, not meter location or physical truth. The anchor is built/tested with a local EVM; a mainnet deployment is not claimed.
+
+**Financial update:** [Consolidated PDF](paper/DIYAR_IBCOL2026_Whitepaper_v2.7_with_Annex_D9_FULL.pdf) · [Pilot-to-scale numbers](results/pilot-to-scale/). The original 42-page v2.7 document remains available for audit.
 
 **Implementation status:** [Implemented / evaluated offline / designed](architecture/implementation-status.md) · [Version index](architecture/release-index.md).
 
