@@ -20,7 +20,7 @@ jobs:
             python tools/finance/build_final.py
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add paper/DIYAR_Whitepaper_v2.7_Financial_Annex_D1_Complete.pdf paper/DIYAR_Annexes_A-H_with_D1.pdf
+            git add paper/DIYAR_IBCOL2026_Whitepaper_v2.7_with_Annex_D9_FULL.pdf paper/DIYAR_IBCOL2026_Annexes_A-H_with_D9.pdf tools/finance/qa_preview_D9_page1.png tools/finance/qa_preview_D9_page2.png
             git diff --cached --check
             git commit -m "build: publish complete whitepaper and annex PDF with integrated financial addendum"
             git push origin HEAD:work/financial-annex-final-pdf-2026-11-10

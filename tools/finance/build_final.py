@@ -23,8 +23,8 @@ from reportlab.pdfbase.ttfonts import TTFont
 ROOT=Path(__file__).resolve().parents[2]
 SOURCE=ROOT/"paper"/"DIYAR whitepaper v2.7.pdf"
 FIN=ROOT/"reference-and-tests"/"DIYAR_cost_model.xlsx"
-OUT=ROOT/"paper"/"DIYAR_Whitepaper_v2.7_Financial_Annex_D1_Complete.pdf"
-ANN=ROOT/"paper"/"DIYAR_Annexes_A-H_with_D1.pdf"
+OUT=ROOT/"paper"/"DIYAR_IBCOL2026_Whitepaper_v2.7_with_Annex_D9_FULL.pdf"
+ANN=ROOT/"paper"/"DIYAR_IBCOL2026_Annexes_A-H_with_D9.pdf"
 
 doc=fitz.open(SOURCE)
 assert len(doc)==42, f"Expected v2.7 42-page archival PDF, found {len(doc)}"
@@ -216,3 +216,11 @@ print("READY",ANN,ANN.stat().st_size,len(annexes),"pages")
 print("Original pages and text verified preserved: 42/42")
 print("Financial extension located at combined pages 25-26; annex-only pages 19-20")
 print("The original submitted v2.7 PDF remains untouched.")
+# Temporary review images on the working branch; not part of the final deliverables.
+for index,filename in [(24,"tools/finance/qa_preview_D9_page1.png"),(25,"tools/finance/qa_preview_D9_page2.png")]:
+    pix=combined[index].get_pixmap(matrix=fitz.Matrix(1.4,1.4),alpha=False)
+    path=ROOT/filename
+    path.parent.mkdir(parents=True,exist_ok=True)
+    pix.save(path)
+    print("QA_PREVIEW",filename,path.stat().st_size,flush=True)
+
