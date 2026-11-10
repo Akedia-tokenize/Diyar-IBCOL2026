@@ -39,6 +39,6 @@ docs/                  GitHub Pages deployment files (technical exception)
 
 **Why does `docs/` remain?** GitHub Pages serves the real demo source from that folder. Moving it would break the deployed site. The human-facing **Demo** section links directly to that original site and source instead of copying it. Full scientific results remain under `reference-and-tests/results/` to preserve the runnable package; the most important summaries and charts are also indexed in **Results**, with their bytes checked against the originals.
 
-[Repository map](architecture/repository-map.md) · [Contribution and preservation rules](CONTRIBUTING.md)
+[Repository map](architecture/repository-map.md) · [Reproducibility guide](architecture/reproduce.md)
 
 Source data credit: Building Data Genome Project 2, Miller et al., *Scientific Data* (2020). Third-party font license notices remain in `docs/fonts/`; the repository does not assert a project-wide open-source license.
