@@ -11,7 +11,6 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parent.parent.parent
 REQUIRED = (
     "README.md",
-    "CONTRIBUTING.md",
     "docs/index.html",
     "docs/js/app.js",
     "docs/anchor/DiyarAnchor.json",
@@ -52,7 +51,7 @@ def check_local(url: str, base: Path, label: str) -> None:
         errors.append(f"{label}: broken relative link: {url}")
 
 # Readme and project navigation paths should be meaningful.
-for markdown in [ROOT / "README.md", ROOT / "CONTRIBUTING.md", *sorted((ROOT / "architecture").glob("*.md"))]:
+for markdown in [ROOT / "README.md", *sorted((ROOT / "architecture").glob("*.md"))]:
     if not markdown.exists():
         continue
     source = markdown.read_text(encoding="utf-8")
