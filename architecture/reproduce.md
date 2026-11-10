@@ -69,7 +69,7 @@ This tests the **local EVM** behavior, not the security of an Ethereum mainnet d
 python3 architecture/scripts/check_repo_layout.py
 python3 -m compileall -q reference-and-tests/diyar reference-and-tests/src reference-and-tests/tests reference-and-tests/run_pipeline.py
 # Historical full-package manifest (inside reference-and-tests/)
-cd reference && sha256sum -c SHA256SUMS.txt
+cd reference-and-tests && sha256sum -c SHA256SUMS.txt
 ```
 
 The lightweight repository check validates file presence, the two PDF copies, and local linked web assets. It is **not** a cryptographic or statistical audit.
