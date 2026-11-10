@@ -9,6 +9,10 @@
 | **E3: Detection limit** | Which alterations are detectable, and what happens under manipulation prevalence? | [Quarterly test](e3/e3a_quarterly.json) · [Additional power test](e3/e3a_extra.json) · [Other modes](e3/e3b_results.json) · [Figure](e3/e3_gates_fox.png) |
 | **E4: Review economics** | How many cases and what cost follow from a given alert threshold? | [Results](e4/e4_results.json) · [Cost model](../reference-and-tests/DIYAR_cost_model.xlsx) |
 
+## Pilot-to-Scale financial supplement
+
+[Proposed Annex D.1](../paper/Annex-D.1-Pilot-to-Scale-SUPPLEMENT.md) · [Scenario table and financial caveats](pilot-to-scale/README.md). This supplement distinguishes normalized annual costs from first-year onboarding cash and leaves the published v2.7 PDF and original six-sheet model unchanged.
+
 ## Figures
 
 **E1 · Storage and custody**

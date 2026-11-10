@@ -1,0 +1,5 @@
+case,buildings,staff_fte,besu_validators,notary_nodes,compute_nodes,normalized_annual_cost_usd,year1_priced_cash_subtotal_usd,normalized_annual_cost_per_building_usd,year1_cash_per_building_usd,status
+reference_stack_100,100,3,4,0,1,204828.86229795936,294828.86229795936,2048.2886229795936,2948.2886229795936,mechanical_base_case
+lean_pilot_100,100,1,0,0,1,77764.70229795936,167764.70229795936,777.6470229795937,1677.6470229795937,unvalidated_architecture_and_staffing
+reference_stack_1000,1000,3,4,0,1,348553.06782478106,1248553.06782478106,348.55306782478107,1248.5530678247811,mechanical_base_case
+reference_stack_10000,10000,3,4,0,1,1785795.123092998,10785795.123092998,178.57951230929982,1078.5795123092998,published_reference_reconciliation
