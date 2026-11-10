@@ -28,6 +28,6 @@ python3 -I src/e3a_quarterly.py "$OUT/e3_fox_daily.npz" "$OUT" > "$OUT/05_e3a_qu
 python3 -I src/e3b_statistical.py "$OUT/e3_fox_daily.npz" "$OUT/e3a_quarterly.json" "$OUT" > "$OUT/06_e3b.log" 2>&1
 python3 -I src/e4_review_budget.py "$OUT/e3_fox_daily.npz" "$OUT" > "$OUT/07_e4.log" 2>&1
 python3 -I src/e2_out_of_time.py "$OUT/e3_fox_daily.npz" "$OUT" > "$OUT/08_e2_out_of_time.log" 2>&1
-python3 -I src/e3a_extra.py "$OUT/e3_fox_daily.npz" "$OUT" > "$OUT/09_e3a_extra.log" 2>&1
+python3 -I src/e3a_extra.py "$OUT/e3_fox_daily.npz" "$OUT/e3a_extra.json" > "$OUT/09_e3a_extra.log" 2>&1
 
 printf 'E2–E4 rerun complete. Output: %s\n' "$OUT"
