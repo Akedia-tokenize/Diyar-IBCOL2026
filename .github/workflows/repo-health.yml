@@ -12,8 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Check repository paths, website links and paper mirror
-        run: python3 scripts/check_repo_layout.py
+        run: python3 architecture/scripts/check_repo_layout.py
       - name: Check Python source syntax (no dependencies required)
-        run: python3 -m compileall -q reference/diyar reference/src reference/tests reference/run_pipeline.py
+        run: python3 -m compileall -q reference-and-tests/diyar reference-and-tests/src reference-and-tests/tests reference-and-tests/run_pipeline.py
       - name: Check portable experiment script syntax
-        run: bash -n reference/scripts/reproduce_e2_e4.sh
+        run: bash -n reference-and-tests/scripts/reproduce_e2_e4.sh

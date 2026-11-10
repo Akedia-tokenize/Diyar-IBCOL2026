@@ -21,12 +21,12 @@ These versioned layers are part of the current running design. Consolidating the
 
 ## Code and data changes
 
-- Python core logic: `reference/diyar/`.
-- Research experiments and numerical reconciliation: `reference/src/`.
-- Regression checks: `reference/tests/`.
-- Solidity reference implementation and local-EVM tests: `reference/anchor/`.
+- Python core logic: `reference-and-tests/diyar/`.
+- Research experiments and numerical reconciliation: `reference-and-tests/src/`.
+- Regression checks: `reference-and-tests/tests/`.
+- Solidity reference implementation and local-EVM tests: `reference-and-tests/anchor/`.
 - Static site: `docs/`.
-- Protected historical artifacts: `reference/results/`, `reference/logs_2026-11-06/` and `reference/SHA256SUMS.txt`.
+- Protected historical artifacts: `reference-and-tests/results/`, `reference-and-tests/logs_2026-11-06/` and `reference-and-tests/SHA256SUMS.txt`.
 
 The two PDF copies are intentional; publishing a new paper requires updating the canonical PDF and the website-accessible copy. Do not change only one.
 

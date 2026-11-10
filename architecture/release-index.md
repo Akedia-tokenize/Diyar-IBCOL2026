@@ -5,13 +5,13 @@
 | Artifact | Current label | Where to find it |
 | --- | --- | --- |
 | Whitepaper | v2.7, 10 Nov 2026 | [Paper PDF](../paper/DIYAR%20whitepaper%20v2.7.pdf) |
-| Machine-readable manuscript | v2.7 | `../reference/paper/DIYAR-whitepaper-v2.7.md` |
-| Python reference implementation | DIYAR-ref v2.1 | [Reference README](../reference/README.md) |
-| Reference run | Recomputed from BDG2, 6 Nov 2026 | `../reference/results/v2_run/` |
-| Historical reference archive | v1.1, 2 Nov 2026 | `../reference/results/prototype/` |
-| Earliest retained run | 27 Oct 2026 | `../reference/results/prototype_v1_2026-10-27/` |
+| Machine-readable manuscript | v2.7 | `../reference-and-tests/paper/DIYAR-whitepaper-v2.7.md` |
+| Python reference implementation | DIYAR-ref v2.1 | [Reference README](../reference-and-tests/README.md) |
+| Reference run | Recomputed from BDG2, 6 Nov 2026 | `../reference-and-tests/results/v2_run/` |
+| Historical reference archive | v1.1, 2 Nov 2026 | `../reference-and-tests/results/prototype/` |
+| Earliest retained run | 27 Oct 2026 | `../reference-and-tests/results/prototype_v1_2026-10-27/` |
 | Browser experience | Aurora UI with v5.2 polish assets | [Website](https://akedia-tokenize.github.io/Diyar-IBCOL2026/) |
-| Reference verification logs | 6 Nov 2026 | `../reference/logs_2026-11-06/` |
+| Reference verification logs | 6 Nov 2026 | `../reference-and-tests/logs_2026-11-06/` |
 
 ## Read these distinctions before quoting results
 

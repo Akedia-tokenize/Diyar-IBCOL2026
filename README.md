@@ -1,73 +1,44 @@
 # DIYAR
 
-**Every number carries its evidence.**
+**Every number carries its evidence.**  
+A provenance-graded evidence layer for sustainability claims in the built environment. **Team Akedia · IBCOL 2026**.
 
-DIYAR is a provenance-graded evidence layer for sustainability claims in buildings, developed by Team Akedia for **IBCOL 2026**. It links reported values to source records, records their residual trust assumptions, and supports independent verification and historical replay.
+[**Open the live demo**](https://akedia-tokenize.github.io/Diyar-IBCOL2026/) · [**Read the whitepaper (v2.7)**](paper/DIYAR%20whitepaper%20v2.7.pdf)
 
-[**Explore the website**](https://akedia-tokenize.github.io/Diyar-IBCOL2026/) · [**Read the whitepaper (v2.7)**](paper/DIYAR%20whitepaper%20v2.7.pdf) · [**Reproduce the research**](reference/README.md)
+## Five sections of the project
 
-> **Scope:** Research and reference implementation, not a live utility or accredited certification service. The published tests use reference data and simulated signing keys. A valid signature does not establish that a meter is physically installed where claimed.
-
-## Start here
-
-| You want to… | Open |
+| Section | What belongs here |
 | --- | --- |
-| Experience the interactive evidence explorer, verifier and replay | [Live website](https://akedia-tokenize.github.io/Diyar-IBCOL2026/) |
-| Evaluate the science, architecture, assumptions and limitations | [Whitepaper v2.7 and annexes A–H](paper/DIYAR%20whitepaper%20v2.7.pdf) |
-| Reproduce the Python reference run and E1–E4 experiments | [Reference implementation](reference/README.md) |
-| Review what is implemented versus evaluated versus proposed | [Implementation status](project/implementation-status.md) |
-| Understand why files are separated and where to make changes | [Repository map](project/repository-map.md) |
-| Run the verifier, experiment reruns or local site | [Reproducibility guide](project/reproduce.md) |
+| **01 · [Paper](paper/)** | Six-page whitepaper v2.7 (10 Nov 2026) and annexes A–H. |
+| **02 · [Architecture](architecture/)** | Evidence grades, architecture, implementation status, assumptions and limits. |
+| **03 · [Demo](demo/)** | Guided tour of the deployed website: Owner, Lender, Verify, Replay and Explorer. |
+| **04 · [Reference & Tests](reference-and-tests/)** | Python reference code, Solidity contract, replay tests, experiment scripts, historical logs and reproducibility tools. |
+| **05 · [Results](results/)** | Selected E1–E4 outcomes, charts, detection boundaries and cost-model links. |
 
-## Repository map
+## IBCOL reviewer quickstart
+
+1. Read [the paper](paper/DIYAR%20whitepaper%20v2.7.pdf) and the [verification model](architecture/verification-model.md).
+2. Open [the demo](demo/) and try **Verify**, **Replay** and the **tamper demonstrations**.
+3. Inspect [the results](results/) and [reproduce them](architecture/reproduce.md) using the source and test package.
+
+The reference demonstration uses historical **Building Data Genome Project 2** measurements from three Fox-site buildings (1 January to 31 March 2017), simulated signer keys and demonstration-only trust pins. This is **not a live utility connection or accredited building assessment**. A valid signature verifies record integrity, not meter location or physical truth. The anchor is built/tested with a local EVM; a mainnet deployment is not claimed.
+
+**Implementation status:** [Implemented / evaluated offline / designed](architecture/implementation-status.md) · [Version index](architecture/release-index.md).
+
+## Repository layout
 
 ```text
-.
-├── docs/                GitHub Pages site, browser-verifier assets, demo evidence
-│   ├── index.html       Website entry point
-│   ├── js/              Frontend, local verification, replay, visualization
-│   ├── data/            Published reference evidence consumed by the site
-│   └── anchor/          Browser anchor demonstration and operator tooling
-├── paper/               Published IBCOL 2026 whitepaper PDF, v2.7
-├── project/             Architecture, status, UX and maintenance documentation
-├── reference/           Python implementation, experiments, proofs and tests
-│   ├── diyar/           Evidence, cryptography, grading, gate and replay modules
-│   ├── src/             E1–E4 experiment and reconciliation scripts
-│   ├── tests/           Verification and regression tests
-│   ├── anchor/          Solidity source and local EVM test harness
-│   ├── results/         Current outputs plus explicitly preserved older runs
-│   └── logs_2026-11-06/ Historical reproducibility/audit logs
-├── scripts/             Repository-maintenance checks
-└── .github/workflows/   Lightweight integrity and syntax CI
+paper/                 Paper v2.7 and annexes
+architecture/          Architectural and technical documentation
+demo/                  Demo navigation for reviewers
+reference-and-tests/   Reference source, test harness and research records
+results/               Curated, byte-identical research highlights
+docs/                  GitHub Pages deployment files (technical exception)
+.github/               Automated repository checks
 ```
 
-**Important:** `docs/` is the deployed GitHub Pages source, not the general writing folder. `project/` holds explanatory documentation. `reference/results/`, dated logs and historical prototypes are evidence artifacts, not temporary clutter. Do not move or regenerate them without updating their provenance records.
+**Why does `docs/` remain?** GitHub Pages serves the real demo source from that folder. Moving it would break the deployed site. The human-facing **Demo** section links directly to that original site and source instead of copying it. Full scientific results remain under `reference-and-tests/results/` to preserve the runnable package; the most important summaries and charts are also indexed in **Results**, with their bytes checked against the originals.
 
-## What is implemented
+[Repository map](architecture/repository-map.md) · [Contribution and preservation rules](CONTRIBUTING.md)
 
-The repository includes signed intake and installation bindings, provenance grading, bitemporal records, sparse-Merkle inclusion/non-membership proofs, a fast statistical watch gate, signed daily commitments, browser-side independent checks, and a Solidity anchor contract exercised on a **local EVM**.
-
-The quarterly slow gate and E1–E4 experiments were evaluated offline; the consortium chain, distributed archival custody, zero-knowledge predicate proofs and inspector-content model remain design work. [See status detail](project/implementation-status.md).
-
-The reference documentation reports 91 signed days from the three-building Fox/BDG2 run and 8/8 replay and 8/8 negative checks. Those are results reported by the project's own experiments, **not an independent certification by GitHub or by a third party**.
-
-## Reproduce
-
-To explore locally (from this repository's root):
-
-```bash
-python3 -m http.server 8000 --directory docs
-# Open http://localhost:8000
-```
-
-To reproduce the Python measurements, download and verify the BDG2 inputs, then follow [the exact commands](project/reproduce.md). The site can show a local-EVM demonstration; an optional Sepolia check may contact public RPC endpoints, so the entire site is not strictly network-free.
-
-## Versions, data and licensing
-
-- **Paper:** v2.7, 10 Nov 2026, [PDF](paper/DIYAR%20whitepaper%20v2.7.pdf).
-- **Reference implementation:** v2.1, with a reference run regenerated from raw BDG2 on 6 Nov 2026.
-- **Website:** Aurora-style static UI with v5.2 CSS refinement layers; these names describe assets, not an official release tag.
-- **Data:** Building Data Genome Project 2 (Miller et al., *Scientific Data*, 2020). The website includes published demo evidence; source dataset download instructions and checksums are in `reference/`.
-- **Licensing:** The Solidity contract's own README identifies its license. Font license notices are in `docs/fonts/`. No repository-wide open-source license is asserted here.
-
-See [release index](project/release-index.md), [contribution guidance](CONTRIBUTING.md) and [development notes](project/developer-notes.md).
+Source data credit: Building Data Genome Project 2, Miller et al., *Scientific Data* (2020). Third-party font license notices remain in `docs/fonts/`; the repository does not assert a project-wide open-source license.

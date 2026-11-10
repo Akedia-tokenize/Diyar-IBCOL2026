@@ -2,9 +2,9 @@
 docs/data/** linguist-generated=true
 docs/js/vendor/** linguist-vendored=true
 docs/fonts/** linguist-vendored=true
-reference/results/** linguist-generated=true
-reference/logs_2026-11-06/** linguist-generated=true
-reference/reconciliation.csv linguist-generated=true
+reference-and-tests/results/** linguist-generated=true
+reference-and-tests/logs_2026-11-06/** linguist-generated=true
+reference-and-tests/reconciliation.csv linguist-generated=true
 *.pdf binary
 *.zip binary
 *.xlsx binary

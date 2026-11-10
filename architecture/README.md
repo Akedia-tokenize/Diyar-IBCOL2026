@@ -12,4 +12,4 @@ This directory is the **navigation and explanation layer** for DIYAR. It is deli
 | [Release index](release-index.md) | Which paper, code, website and datasets are current |
 | [Developer notes](developer-notes.md) | How to change the site without breaking proofs or publication |
 
-For the research claims, consult the [whitepaper PDF](../paper/DIYAR%20whitepaper%20v2.7.pdf). For exact scripts and dependencies, consult the [reference README](../reference/README.md).
+For the research claims, consult the [whitepaper PDF](../paper/DIYAR%20whitepaper%20v2.7.pdf). For exact scripts and dependencies, consult the [reference README](../reference-and-tests/README.md).

@@ -15,7 +15,7 @@ Then open `http://localhost:8000`, use **Verify** and **Replay**, and inspect th
 ## 2. Prepare the Python environment
 
 ```bash
-cd reference
+cd reference-and-tests
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install numpy pandas cryptography slh-dsa==0.2.5
@@ -26,7 +26,7 @@ The project documents a test environment of Python 3.13.18, NumPy 2.5.3, pandas 
 
 ## 3. Replay and negative tests on the committed reference run
 
-From `reference/`:
+From `reference-and-tests/`:
 
 ```bash
 P=results/v2_run
@@ -40,7 +40,7 @@ The pin files have deliberately alarming names: **they are not independent trust
 ## 4. Recreate the reference data and research experiments
 
 ```bash
-# Run from reference/
+# Run from reference-and-tests/
 python3 -I run_pipeline.py data/bdg2 results/reproduced-v2
 
 # Re-run E2–E4 in a separate output folder using a portable wrapper:
@@ -49,12 +49,12 @@ bash scripts/reproduce_e2_e4.sh data/bdg2 results/reproduced-e2-e4
 
 The archived `logs_2026-11-06/rerun_e2_e4/run_all.sh` documents the **original historical execution** and contains machine-specific absolute paths. It is intentionally preserved unchanged. Use the portable script above for a new run.
 
-For E1, E4, other experiments and paper-number reconciliation, use the exact published commands in [reference/README.md](../reference/README.md). The source paper used for current reconciliation is `reference/paper/DIYAR-whitepaper-v2.7.md`.
+For E1, E4, other experiments and paper-number reconciliation, use the exact published commands in [reference-and-tests/README.md](../reference-and-tests/README.md). The source paper used for current reconciliation is `reference-and-tests/paper/DIYAR-whitepaper-v2.7.md`.
 
 ## 5. Contract local-EVM tests
 
 ```bash
-cd reference/anchor
+cd reference-and-tests/anchor
 npm ci
 node compile.cjs
 node test.mjs ../results/v2_run/ledger.json
@@ -66,9 +66,9 @@ This tests the **local EVM** behavior, not the security of an Ethereum mainnet d
 
 ```bash
 # From repository root
-python3 scripts/check_repo_layout.py
-python3 -m compileall -q reference/diyar reference/src reference/tests reference/run_pipeline.py
-# Historical full-package manifest (inside reference/)
+python3 architecture/scripts/check_repo_layout.py
+python3 -m compileall -q reference-and-tests/diyar reference-and-tests/src reference-and-tests/tests reference-and-tests/run_pipeline.py
+# Historical full-package manifest (inside reference-and-tests/)
 cd reference && sha256sum -c SHA256SUMS.txt
 ```
 
