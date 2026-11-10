@@ -1,6 +1,6 @@
 # DIYAR implementation status
 
-Whitepaper version 2.6, 8 November 2026. Reference run of 6 November 2026.
+Whitepaper version 2.7, 10 November 2026. Reference run of 6 November 2026.
 
 ## What is built and run
 
@@ -37,4 +37,4 @@ Besu QBFT consortium, Reed Solomon RS(10,4) custody across at least 4 custodians
 | Anchoring at the measured 58,929 gas a day | about $29 a year for the whole system |
 | Cost | about $179 per building per year |
 
-Signer keys are simulated and the pins are for the demo. The whitepaper is submitted to IBCOL 2026 and is not published here.
+Signer keys are simulated and the pins are for the demo. The whitepaper, with annexes A to H, is in the paper folder.

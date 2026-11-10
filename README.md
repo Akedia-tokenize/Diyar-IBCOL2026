@@ -13,7 +13,7 @@ DIYAR grades every number by the path it arrived through, commits it under a sig
 ## Open it
 
 * **Website:** https://akedia-tokenize.github.io/Diyar-IBCOL2026/
-* **Whitepaper:** submitted to IBCOL 2026 and shared with the judges; it is not published here.
+* **Whitepaper:** [6 pages, with annexes A to H](paper/DIYAR%20whitepaper%20v2.7.pdf)
 * **Reference implementation:** [reference](reference/)
 
 ## What is inside
@@ -22,6 +22,7 @@ DIYAR grades every number by the path it arrived through, commits it under a sig
 |---|---|
 | docs | The website. Pick a role: building owner, lender or auditor. Every check runs in your browser. |
 | reference | The reference implementation in Python, version 2.1: the pipeline, experiments E1 to E4, the cost model, and the anchor contract with its 17 tests. |
+| paper | The whitepaper, 6 pages, with annexes A to H. |
 
 ## Check it yourself
 

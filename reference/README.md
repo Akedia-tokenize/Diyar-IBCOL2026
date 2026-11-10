@@ -42,7 +42,7 @@ python3 -I tests/test_vectors.py                             # verifier test vec
 for t in authoritative_v2 binding_v2 trust_p003 store_chronology_p004; do
     python3 -I tests/test_$t.py; python3 -I -O tests/test_$t.py; done   # 108 targeted tests, twice
 python3 -I src/reconcile.py results DIYAR_cost_model.xlsx reconciliation.csv \
-    --paper paper/DIYAR-whitepaper-v2.6.md --bdg2 data/bdg2   # 112 printed numbers vs producers
+    --paper paper/DIYAR-whitepaper-v2.7.md --bdg2 data/bdg2   # 112 printed numbers vs producers
 (cd anchor && npm ci && node compile.cjs && node test.mjs ../results/v2_run/ledger.json)   # anchor contract: 17 tests
 ```
 
@@ -91,6 +91,8 @@ E2–E4 were regenerated from the 3 raw BDG2 files on 6 November 2026: all 11 re
 | Predicate proofs without disclosure (e.g. consumption below a threshold) | Designed, not built; Merkle selective disclosure of exact values is implemented |
 
 ## Changes
+
+**Paper v2.7 (10 Nov 2026).** `paper/DIYAR-whitepaper-v2.7.md` replaces v2.6. The only change to the text is one sentence at the end of the reference run paragraph (Section IV) with the links to the public repository and the website; Annex B.1 carries the same links. The author line here shows the repository link in place of an e-mail address. `reconcile.py --paper paper/DIYAR-whitepaper-v2.7.md`: 112 numbers, 0 mismatches, 0 wordings missing; `reconciliation.csv` is unchanged.
 
 **v2.1 (8 Nov 2026).** `anchor/` added: `DiyarAnchor.sol` (solc 0.8.26) keeps the chain head and each day's root in state, recomputes every entry with the ledger rule, and reverts on a fork, a non-increasing day or a second writer; 17 tests on @ethereumjs/vm against `results/v2_run/ledger.json`. Measured gas: deployment 427,275, typical daily anchor 58,929, all 91 days in one batch 2,586,922. The cost model uses the measured 58,929 gas instead of the event-only 25,000 estimate: anchoring $29.31 a year (was $12.43); total $1,785,795.12, still $178.58 per building-year. `reconcile.py` updated to the v2.6 whitepaper: 112 numbers, 0 mismatches; the workbook's gas input is checked against `anchor/gas.json`.
 
