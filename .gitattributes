@@ -1,0 +1,11 @@
+# Mark published/generated evidence and third-party libraries clearly in GitHub.
+docs/data/** linguist-generated=true
+docs/js/vendor/** linguist-vendored=true
+docs/fonts/** linguist-vendored=true
+reference/results/** linguist-generated=true
+reference/logs_2026-11-06/** linguist-generated=true
+reference/reconciliation.csv linguist-generated=true
+*.pdf binary
+*.zip binary
+*.xlsx binary
+*.woff2 binary
