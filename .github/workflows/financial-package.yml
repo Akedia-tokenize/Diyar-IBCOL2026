@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install PDF tools
-        run: python -m pip install --quiet pymupdf reportlab
+        run: python -m pip install --quiet pymupdf reportlab openpyxl
       - name: Inspect original PDF structure
         run: python tools/finance/page_map.py
       - name: Assemble when builder is present
