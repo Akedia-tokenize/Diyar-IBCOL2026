@@ -2,60 +2,72 @@
 
 **Every number carries its evidence.**
 
-A provenance graded evidence layer for sustainability claims in the built environment. IBCOL 2026, Team Akedia.
+DIYAR is a provenance-graded evidence layer for sustainability claims in buildings, developed by Team Akedia for **IBCOL 2026**. It links reported values to source records, records their residual trust assumptions, and supports independent verification and historical replay.
 
-Every property is a story that lives; a certificate is one frame of it. DIYAR keeps the whole story checkable.
+[**Explore the website**](https://akedia-tokenize.github.io/Diyar-IBCOL2026/) · [**Read the whitepaper (v2.7)**](paper/DIYAR%20whitepaper%20v2.7.pdf) · [**Reproduce the research**](reference/README.md)
 
-Buildings account for roughly a third of energy related CO2 emissions, so climate targets depend on claims about single buildings being true. Often they are not: certified efficient homes have been measured using 39 to 54% more energy than their certificates predict. What is missing is not data but provenance.
+> **Scope:** Research and reference implementation, not a live utility or accredited certification service. The published tests use reference data and simulated signing keys. A valid signature does not establish that a meter is physically installed where claimed.
 
-DIYAR grades every number by the path it arrived through, commits it under a signed daily root, and keeps every correction. Anyone can recheck the result on their own laptop.
+## Start here
 
-## Open it
+| You want to… | Open |
+| --- | --- |
+| Experience the interactive evidence explorer, verifier and replay | [Live website](https://akedia-tokenize.github.io/Diyar-IBCOL2026/) |
+| Evaluate the science, architecture, assumptions and limitations | [Whitepaper v2.7 and annexes A–H](paper/DIYAR%20whitepaper%20v2.7.pdf) |
+| Reproduce the Python reference run and E1–E4 experiments | [Reference implementation](reference/README.md) |
+| Review what is implemented versus evaluated versus proposed | [Implementation status](project/implementation-status.md) |
+| Understand why files are separated and where to make changes | [Repository map](project/repository-map.md) |
+| Run the verifier, experiment reruns or local site | [Reproducibility guide](project/reproduce.md) |
 
-* **Website:** https://akedia-tokenize.github.io/Diyar-IBCOL2026/
-* **Whitepaper:** [6 pages, with annexes A to H](paper/DIYAR%20whitepaper%20v2.7.pdf)
-* **Reference implementation:** [reference](reference/)
+## Repository map
 
-## What is inside
+```text
+.
+├── docs/                GitHub Pages site, browser-verifier assets, demo evidence
+│   ├── index.html       Website entry point
+│   ├── js/              Frontend, local verification, replay, visualization
+│   ├── data/            Published reference evidence consumed by the site
+│   └── anchor/          Browser anchor demonstration and operator tooling
+├── paper/               Published IBCOL 2026 whitepaper PDF, v2.7
+├── project/             Architecture, status, UX and maintenance documentation
+├── reference/           Python implementation, experiments, proofs and tests
+│   ├── diyar/           Evidence, cryptography, grading, gate and replay modules
+│   ├── src/             E1–E4 experiment and reconciliation scripts
+│   ├── tests/           Verification and regression tests
+│   ├── anchor/          Solidity source and local EVM test harness
+│   ├── results/         Current outputs plus explicitly preserved older runs
+│   └── logs_2026-11-06/ Historical reproducibility/audit logs
+├── scripts/             Repository-maintenance checks
+└── .github/workflows/   Lightweight integrity and syntax CI
+```
 
-| Folder | What it holds |
-|---|---|
-| docs | The website. Pick a role: building owner, lender or auditor. Every check runs in your browser. |
-| reference | The reference implementation in Python, version 2.1: the pipeline, experiments E1 to E4, the cost model, and the anchor contract with its 17 tests. |
-| paper | The whitepaper, 6 pages, with annexes A to H. |
+**Important:** `docs/` is the deployed GitHub Pages source, not the general writing folder. `project/` holds explanatory documentation. `reference/results/`, dated logs and historical prototypes are evidence artifacts, not temporary clutter. Do not move or regenerate them without updating their provenance records.
 
-## Check it yourself
+## What is implemented
 
-1. Open the website and go to Verify.
-2. Press Run independent checks. 11 checks run on the published bytes in about 5 seconds, including all 6,497 hourly meter signatures.
-3. In the tamper lab, change a copy of the data and watch which check catches it.
-4. Run the anchor contract in your browser: a fork, a rewritten day and an outside writer all revert.
+The repository includes signed intake and installation bindings, provenance grading, bitemporal records, sparse-Merkle inclusion/non-membership proofs, a fast statistical watch gate, signed daily commitments, browser-side independent checks, and a Solidity anchor contract exercised on a **local EVM**.
 
-Nothing leaves your browser.
+The quarterly slow gate and E1–E4 experiments were evaluated offline; the consortium chain, distributed archival custody, zero-knowledge predicate proofs and inspector-content model remain design work. [See status detail](project/implementation-status.md).
 
-To rerun everything from the raw data, follow [reference/README.md](reference/README.md). The replay checks pass 8 of 8, the negative checks pass 8 of 8, and the reconciliation compares the 112 numbers printed in the whitepaper with the code that produces them: 0 mismatches.
+The reference documentation reports 91 signed days from the three-building Fox/BDG2 run and 8/8 replay and 8/8 negative checks. Those are results reported by the project's own experiments, **not an independent certification by GitHub or by a third party**.
 
-## What the reference run shows
+## Reproduce
 
-| What we measured | Result |
-|---|---|
-| Signed days replayed from the published files | 91 of 91 |
-| Alerts on 801 real buildings: one time calibration, then recent window calibration | 17.4%, then about 5% (target 5%) |
-| One manipulated building among honest peers, tested each quarter | 80% detection at about a 25% underreport |
-| Cost for 10,000 buildings, under stated assumptions | about $179 per building per year, nearly all of it people and physical inspection |
+To explore locally (from this repository's root):
 
-## Limits
+```bash
+python3 -m http.server 8000 --directory docs
+# Open http://localhost:8000
+```
 
-This is a reference run, not a live system. It uses public meter data from 3 buildings of the Building Data Genome Project 2 (Fox site, 1 January to 31 March 2017), regenerated from the raw files on 6 November 2026. Signer keys are simulated and the trust pins are for the demo. The anchor contract is built and tested on a local EVM, not deployed on a public network.
+To reproduce the Python measurements, download and verify the BDG2 inputs, then follow [the exact commands](project/reproduce.md). The site can show a local-EVM demonstration; an optional Sepolia check may contact public RPC endpoints, so the entire site is not strictly network-free.
 
-We invented nothing. Every part of DIYAR is an established method; what is new is how a number is graded and how the parts hold together.
+## Versions, data and licensing
 
-## Notes
+- **Paper:** v2.7, 10 Nov 2026, [PDF](paper/DIYAR%20whitepaper%20v2.7.pdf).
+- **Reference implementation:** v2.1, with a reference run regenerated from raw BDG2 on 6 Nov 2026.
+- **Website:** Aurora-style static UI with v5.2 CSS refinement layers; these names describe assets, not an official release tag.
+- **Data:** Building Data Genome Project 2 (Miller et al., *Scientific Data*, 2020). The website includes published demo evidence; source dataset download instructions and checksums are in `reference/`.
+- **Licensing:** The Solidity contract's own README identifies its license. Font license notices are in `docs/fonts/`. No repository-wide open-source license is asserted here.
 
-* [Implementation status](docs/implementation-status.md)
-* [Evidence grades and verification](docs/verification-model.md)
-* [UI direction](docs/ui-direction.md)
-
-## Credits
-
-Meter and weather data: Building Data Genome Project 2, Miller et al., Scientific Data 7, 368 (2020). Fonts: Fraunces, Inter and IBM Plex Mono, under the SIL Open Font License.
+See [release index](project/release-index.md), [contribution guidance](CONTRIBUTING.md) and [development notes](project/developer-notes.md).

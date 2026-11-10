@@ -1,10 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.coverage
+htmlcov/
+
+# Node and generated builds
 node_modules/
 dist/
 build/
+coverage/
+
+# Local environment and OS files
 .env
 .env.*
 !.env.example
-__pycache__/
-.pytest_cache/
 .DS_Store
+Thumbs.db
 *.log
+
+# Raw BDG2 inputs and new, locally regenerated output (published snapshots stay tracked)
+reference/data/bdg2/
+reference/results/reproduced*/
+reference/results/reproduction*/
+reference/anchor/e2e-out/
+docs/anchor/e2e-out/

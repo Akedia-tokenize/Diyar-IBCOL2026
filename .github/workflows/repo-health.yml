@@ -1,0 +1,19 @@
+name: Repository health
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check repository paths, website links and paper mirror
+        run: python3 scripts/check_repo_layout.py
+      - name: Check Python source syntax (no dependencies required)
+        run: python3 -m compileall -q reference/diyar reference/src reference/tests reference/run_pipeline.py
+      - name: Check portable experiment script syntax
+        run: bash -n reference/scripts/reproduce_e2_e4.sh
