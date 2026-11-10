@@ -22,8 +22,8 @@ Thumbs.db
 *.log
 
 # Raw BDG2 inputs and new, locally regenerated output (published snapshots stay tracked)
-reference/data/bdg2/
-reference/results/reproduced*/
-reference/results/reproduction*/
-reference/anchor/e2e-out/
+reference-and-tests/data/bdg2/
+reference-and-tests/results/reproduced*/
+reference-and-tests/results/reproduction*/
+reference-and-tests/anchor/e2e-out/
 docs/anchor/e2e-out/
