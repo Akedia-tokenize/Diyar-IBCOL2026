@@ -45,7 +45,7 @@ def norm(n,fte=3,besu=4):
 def cash(n,fte=3,besu=4):
     return norm(n,fte,besu)+900*n
 def usd(v):
-    return f"\${v:,.0f}"
+    return "$" + f"{v:,.0f}"
 assert abs(norm(100)-204828.86229795936)<0.03
 assert abs(cash(100)-294828.86229795936)<0.03
 assert abs(norm(100,1,0)-77764.70229795936)<0.03
